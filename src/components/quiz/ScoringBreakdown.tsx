@@ -27,19 +27,30 @@ const ScoringBreakdown = ({
 
   if (!selectedOptionData) return null;
 
-  const renderRiskLink = (riskPath: string) => {
-    const riskConfig = risksConfig[riskPath];
-    if (!riskConfig) return null;
+  const renderFrameworkReasoning = (score: { framework: string; score: number }) => {
+    const framework = ethicalFrameworks.find(f => f.id === score.framework);
+    if (!framework) return null;
 
-    return (
-      <Link 
-        to={`/risks/${riskPath}`} 
-        state={{ fromQuizResults: true }}
-        className="text-purple-600 underline hover:text-purple-800"
-      >
-        Learn more about {riskConfig.title}
-      </Link>
-    );
+    let reasoning = '';
+    if (score.score > 0) {
+      reasoning = `Aligns with ${framework.name}'s emphasis on ${
+        score.framework === 'duty' ? 'following established principles and protecting privacy' :
+        score.framework === 'consequentialism' ? 'maximizing beneficial outcomes and engagement' :
+        'developing good character and balanced judgment'
+      }`;
+    } else if (score.score < 0) {
+      reasoning = `Conflicts with ${framework.name}'s ${
+        score.framework === 'duty' ? 'focus on privacy protection and ethical rules' :
+        score.framework === 'consequentialism' ? 'goal of maximizing positive outcomes' :
+        'emphasis on developing virtuous habits'
+      }`;
+    }
+
+    return reasoning ? (
+      <div className="ml-4 mt-1 text-sm text-gray-600">
+        <span className="italic">{reasoning}</span>
+      </div>
+    ) : null;
   };
 
   return (
@@ -56,11 +67,14 @@ const ScoringBreakdown = ({
                 (f) => f.id === score.framework
               );
               return (
-                <div key={i} className="flex items-center gap-2 text-sm">
-                  <span className="font-medium">{framework?.name}:</span>
-                  <span className={score.score >= 0 ? "text-green-600" : "text-red-600"}>
-                    {score.score > 0 ? "+" : ""}{score.score} points
-                  </span>
+                <div key={i}>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="font-medium">{framework?.name}:</span>
+                    <span className={score.score >= 0 ? "text-green-600" : "text-red-600"}>
+                      {score.score > 0 ? "+" : ""}{score.score} points
+                    </span>
+                  </div>
+                  {renderFrameworkReasoning(score)}
                 </div>
               );
             })}
