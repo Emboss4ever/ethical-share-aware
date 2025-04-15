@@ -9,87 +9,197 @@ export interface EthicalFramework {
 
 export const ethicalFrameworks: EthicalFramework[] = [
   {
-    id: "consent",
-    name: "Consent Ethics",
-    description: "Focuses on obtaining explicit permission before actions that affect others.",
+    id: "duty",
+    name: "Deontology (Duty Ethics)",
+    description: "Focuses on following moral rules and obligations regardless of outcomes. Actions are judged by their inherent rightness or wrongness based on universal principles.",
     principles: [
-      "Always seek informed consent",
-      "Respect others' right to choose",
-      "Be transparent about intentions",
-      "Accept refusal gracefully"
+      "Follow moral rules consistently",
+      "Act according to universal principles",
+      "Respect individual rights and dignity",
+      "Fulfill your duties and obligations"
     ],
-    socialMediaExample: "Getting permission before tagging someone in photos or sharing their personal information."
+    socialMediaExample: "Not sharing fake news even if it would benefit your cause, because spreading misinformation violates the principle of truthfulness."
   },
   {
     id: "consequentialism",
     name: "Consequentialism",
-    description: "Evaluates actions based on their outcomes rather than intentions.",
+    description: "Evaluates actions based on their outcomes rather than intentions. The right action is the one that produces the best overall consequences.",
     principles: [
-      "Consider the full impact of your posts",
-      "Weigh potential benefits against harms",
-      "Think about long-term consequences",
-      "Prioritize actions that benefit many"
+      "Consider the full impact of actions",
+      "Maximize beneficial outcomes",
+      "Balance individual and collective good",
+      "Think about long-term effects"
     ],
-    socialMediaExample: "Deciding not to share a controversial joke because it might harm relationships or offend others, despite your innocent intentions."
+    socialMediaExample: "Deciding not to share a controversial joke because it might harm relationships or offend others, despite innocent intentions."
   },
   {
     id: "virtue",
     name: "Virtue Ethics",
-    description: "Emphasizes developing good character traits that guide ethical behavior.",
+    description: "Emphasizes developing good character traits that guide ethical behavior. Focuses on being a good person rather than following rules or calculating consequences.",
     principles: [
-      "Act with honesty and integrity",
-      "Practice empathy and compassion",
-      "Demonstrate courage in standing for truth",
-      "Show moderation in self-promotion"
+      "Cultivate moral character",
+      "Practice wisdom and judgment",
+      "Show integrity and honesty",
+      "Demonstrate courage and compassion"
     ],
-    socialMediaExample: "Being honest about your experiences rather than creating a false impression to gain followers."
+    socialMediaExample: "Being authentic and honest about your experiences rather than creating a false impression to gain followers."
+  }
+];
+
+export interface QuizScoring {
+  questionId: number;
+  options: {
+    id: string;
+    text: string;
+    framework: string;
+    explanation: string;
+  }[];
+}
+
+export const quizScoring: QuizScoring[] = [
+  {
+    questionId: 1,
+    options: [
+      {
+        id: "1a",
+        text: "Post it immediately if it looks good",
+        framework: "consequentialism",
+        explanation: "Prioritizes outcomes (social engagement) over consent"
+      },
+      {
+        id: "1b",
+        text: "Ask everyone in the photo for permission first",
+        framework: "duty",
+        explanation: "Follows the moral rule of respecting others' autonomy"
+      },
+      {
+        id: "1c",
+        text: "Only ask close friends, assume others are fine with it",
+        framework: "virtue",
+        explanation: "Relies on personal judgment and relationships"
+      },
+      {
+        id: "1d",
+        text: "Consider what's appropriate based on your platform's community norms",
+        framework: "consequentialism",
+        explanation: "Focuses on social outcomes and community impact"
+      }
+    ]
   },
   {
-    id: "duty",
-    name: "Duty Ethics (Deontology)",
-    description: "Focuses on following moral rules and obligations regardless of outcomes.",
-    principles: [
-      "Uphold universal principles",
-      "Act as you would want everyone to act",
-      "Treat people as ends, not means",
-      "Follow ethical rules consistently"
-    ],
-    socialMediaExample: "Not sharing fake news even if it would benefit your cause, because spreading misinformation is wrong in principle."
+    questionId: 2,
+    options: [
+      {
+        id: "2a",
+        text: "Share your opinions freely – social media is for self-expression",
+        framework: "consequentialism",
+        explanation: "Prioritizes personal benefit over potential harm"
+      },
+      {
+        id: "2b",
+        text: "Consider how your words might impact different groups of people",
+        framework: "consequentialism",
+        explanation: "Evaluates actions based on their consequences"
+      },
+      {
+        id: "2c",
+        text: "Research thoroughly to ensure accuracy before posting",
+        framework: "virtue",
+        explanation: "Demonstrates intellectual virtue and responsibility"
+      },
+      {
+        id: "2d",
+        text: "Think about whether sharing will lead to a productive conversation",
+        framework: "consequentialism",
+        explanation: "Focuses on outcomes of the communication"
+      }
+    ]
   },
   {
-    id: "care",
-    name: "Ethics of Care",
-    description: "Emphasizes relationships and responding to the needs of others with compassion.",
-    principles: [
-      "Prioritize caring relationships",
-      "Consider emotional impacts",
-      "Act with empathy and compassion",
-      "Recognize interdependence"
-    ],
-    socialMediaExample: "Checking in privately with a friend who seems to be struggling based on their posts, rather than publicly commenting."
+    questionId: 3,
+    options: [
+      {
+        id: "3a",
+        text: "Share quickly to be the first - you can always delete if it's wrong",
+        framework: "consequentialism",
+        explanation: "Prioritizes immediate benefits over accuracy"
+      },
+      {
+        id: "3b",
+        text: "Check multiple reliable sources before sharing",
+        framework: "virtue",
+        explanation: "Shows diligence and commitment to truth"
+      },
+      {
+        id: "3c",
+        text: "Share only from official or well-known sources",
+        framework: "duty",
+        explanation: "Follows rule-based approach to information sharing"
+      },
+      {
+        id: "3d",
+        text: "Add your own disclaimer about potential accuracy issues",
+        framework: "virtue",
+        explanation: "Demonstrates honesty and transparency"
+      }
+    ]
   },
   {
-    id: "social_contract",
-    name: "Social Contract Ethics",
-    description: "Based on implicit agreements that maintain social harmony and community standards.",
-    principles: [
-      "Follow platform community guidelines",
-      "Respect cultural and social norms",
-      "Contribute positively to communities",
-      "Balance individual freedom with collective well-being"
-    ],
-    socialMediaExample: "Adhering to the unwritten rules of different platforms (e.g., professional content on LinkedIn versus casual posts on Instagram)."
+    questionId: 4,
+    options: [
+      {
+        id: "4a",
+        text: "Everything is public - you have nothing to hide",
+        framework: "consequentialism",
+        explanation: "Values openness over privacy concerns"
+      },
+      {
+        id: "4b",
+        text: "You carefully customize settings for different types of content",
+        framework: "duty",
+        explanation: "Takes systematic approach to privacy protection"
+      },
+      {
+        id: "4c",
+        text: "Your accounts are mostly private, with exceptions for specific content",
+        framework: "virtue",
+        explanation: "Shows prudence in managing privacy"
+      },
+      {
+        id: "4d",
+        text: "You use defaults and adjust when there's a specific reason to",
+        framework: "consequentialism",
+        explanation: "Pragmatic approach based on specific situations"
+      }
+    ]
   },
   {
-    id: "libertarian",
-    name: "Digital Libertarianism",
-    description: "Emphasizes freedom of expression and minimal restrictions online.",
-    principles: [
-      "Maximize free expression",
-      "Take personal responsibility",
-      "Minimize censorship",
-      "Value privacy and autonomy"
-    ],
-    socialMediaExample: "Sharing your unfiltered opinions while accepting that others may criticize or disagree with you."
+    questionId: 5,
+    options: [
+      {
+        id: "5a",
+        text: "Ignore it - people can believe what they want",
+        framework: "consequentialism",
+        explanation: "Avoids conflict but neglects responsibility"
+      },
+      {
+        id: "5b",
+        text: "Politely comment with corrected information and sources",
+        framework: "duty",
+        explanation: "Fulfills duty to promote truth"
+      },
+      {
+        id: "5c",
+        text: "Report the content to the platform",
+        framework: "duty",
+        explanation: "Follows established procedures for handling misinformation"
+      },
+      {
+        id: "5d",
+        text: "Consider the poster's intent before deciding how to respond",
+        framework: "virtue",
+        explanation: "Uses practical wisdom to choose appropriate response"
+      }
+    ]
   }
 ];

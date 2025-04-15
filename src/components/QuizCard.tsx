@@ -1,11 +1,16 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { quizQuestions, QuizQuestion } from "@/data/quizQuestions";
-import { ethicalFrameworks } from "@/data/frameworks";
+import { ethicalFrameworks, quizScoring } from "@/data/frameworks";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowRight, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle, ChevronLeft, ChevronRight, Info } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface ResultScore {
   frameworkId: string;
@@ -55,15 +60,12 @@ const QuizCard = () => {
   };
 
   const calculateResults = () => {
-    // Create a map to store scores for each framework
     const frameworkScores: Record<string, number> = {};
     
-    // Initialize with all frameworks set to 0
     ethicalFrameworks.forEach(framework => {
       frameworkScores[framework.id] = 0;
     });
 
-    // Calculate scores based on selected options
     selectedOptions.forEach((optionId, questionIndex) => {
       const question = quizQuestions[questionIndex];
       const selectedOption = question.options.find(option => option.id === optionId);
@@ -73,10 +75,8 @@ const QuizCard = () => {
       }
     });
 
-    // Calculate maximum possible score per framework
-    const maxPossibleScorePerFramework = 9; // Assuming max score is 3 per question and each framework appears in 3 questions
+    const maxPossibleScorePerFramework = 9;
     
-    // Convert to array of results with percentages
     const resultsArray: ResultScore[] = Object.entries(frameworkScores)
       .map(([frameworkId, score]) => ({
         frameworkId,
@@ -97,6 +97,40 @@ const QuizCard = () => {
 
   const isOptionSelected = (optionId: string) => {
     return selectedOptions[currentQuestionIndex] === optionId;
+  };
+
+  const renderScoringBreakdown = (questionIndex: number) => {
+    const scoring = quizScoring[questionIndex];
+    const selectedOption = scoring.options.find(
+      (opt) => opt.id === selectedOptions[questionIndex]
+    );
+
+    if (!selectedOption) return null;
+
+    const framework = ethicalFrameworks.find(
+      (f) => f.id === selectedOption.framework
+    );
+
+    return (
+      <div className="mt-2">
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <span className="font-medium">Framework:</span>
+          <span>{framework?.name}</span>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="h-6 w-6">
+                <Info className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem className="text-sm">
+                {selectedOption.explanation}
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </div>
+    );
   };
 
   if (quizCompleted) {
@@ -128,7 +162,7 @@ const QuizCard = () => {
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
-              {results.slice(0, 4).map((result) => {
+              {results.map((result) => {
                 const framework = ethicalFrameworks.find(
                   (f) => f.id === result.frameworkId
                 );
@@ -147,6 +181,21 @@ const QuizCard = () => {
                   </div>
                 );
               })}
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-lg font-medium mb-4">Your Answers Analysis</h4>
+              <div className="space-y-4">
+                {quizQuestions.map((question, index) => (
+                  <div key={index} className="p-4 border rounded-lg">
+                    <p className="font-medium mb-2">Q{index + 1}: {question.question}</p>
+                    <p className="text-gray-600 mb-2">
+                      Your answer: {question.options.find(opt => opt.id === selectedOptions[index])?.text}
+                    </p>
+                    {renderScoringBreakdown(index)}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </CardContent>
