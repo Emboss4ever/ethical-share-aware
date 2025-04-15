@@ -4,182 +4,193 @@ import { QuizQuestionSet } from "@/types/ethics";
 export const socialMediaQuestions: QuizQuestionSet = [
   {
     id: 1,
-    question: "How often do you post on social media?",
+    question: "When sharing a photo, I consider metadata and location information visible to others:",
     options: [
       {
         id: "1a",
-        text: "Multiple times per day",
+        text: "I never think about hidden data in my posts",
         scoring: [
-          { framework: "consequentialism", score: 20 },
+          { framework: "consequentialism", score: -20 },
           { framework: "virtue", score: -10 }
         ]
       },
       {
         id: "1b",
-        text: "Once daily",
+        text: "I carefully strip sensitive data before sharing",
         scoring: [
-          { framework: "consequentialism", score: 10 }
+          { framework: "duty", score: 30 },
+          { framework: "virtue", score: 20 }
         ]
       },
       {
         id: "1c",
-        text: "A few times per week",
+        text: "I assume platforms handle that automatically",
         scoring: [
-          { framework: "duty", score: 10 }
+          { framework: "consequentialism", score: -10 },
+          { framework: "duty", score: -20 }
         ]
       },
       {
         id: "1d",
-        text: "Only when something significant happens",
+        text: "I review each post's data individually",
         scoring: [
-          { framework: "virtue", score: 20 }
+          { framework: "virtue", score: 30 },
+          { framework: "duty", score: 20 }
         ]
       }
     ]
   },
   {
     id: 2,
-    question: "What privacy settings do you typically use for your posts?",
+    question: "When someone messages me claiming to be an old friend:",
     options: [
       {
         id: "2a",
-        text: "Public - everyone can see",
+        text: "I engage immediately if they seem familiar",
         scoring: [
-          { framework: "consequentialism", score: 30 },
-          { framework: "duty", score: -10 }
+          { framework: "consequentialism", score: -30 },
+          { framework: "virtue", score: -20 }
         ]
       },
       {
         id: "2b",
-        text: "Friends only",
+        text: "I verify their identity through mutual connections",
         scoring: [
-          { framework: "duty", score: 20 }
+          { framework: "duty", score: 30 },
+          { framework: "virtue", score: 20 }
         ]
       },
       {
         id: "2c",
-        text: "Custom lists based on content type",
+        text: "I ignore all unexpected connection attempts",
         scoring: [
-          { framework: "virtue", score: 20 },
-          { framework: "duty", score: 10 }
+          { framework: "virtue", score: 10 },
+          { framework: "duty", score: 20 }
         ]
       },
       {
         id: "2d",
-        text: "Mostly private with occasional public posts",
+        text: "I share limited information while building trust",
         scoring: [
-          { framework: "virtue", score: 10 },
-          { framework: "consequentialism", score: 10 }
+          { framework: "consequentialism", score: 10 },
+          { framework: "virtue", score: -10 }
         ]
       }
     ]
   },
   {
     id: 3,
-    question: "How do you handle friend/follow requests?",
+    question: "If I notice subtle changes in a friend's online behavior:",
     options: [
       {
         id: "3a",
-        text: "Accept everyone",
+        text: "I assume they're exploring new interests",
         scoring: [
-          { framework: "consequentialism", score: 30 },
-          { framework: "duty", score: -20 }
-        ]
-      },
-      {
-        id: "3b",
-        text: "Only people I know in real life",
-        scoring: [
-          { framework: "duty", score: 30 }
-        ]
-      },
-      {
-        id: "3c",
-        text: "Based on mutual connections and profile review",
-        scoring: [
-          { framework: "virtue", score: 20 }
-        ]
-      },
-      {
-        id: "3d",
-        text: "Strict verification process",
-        scoring: [
-          { framework: "duty", score: 20 },
-          { framework: "virtue", score: 10 }
-        ]
-      }
-    ]
-  },
-  {
-    id: 4,
-    question: "What type of content do you most frequently share?",
-    options: [
-      {
-        id: "4a",
-        text: "Personal achievements and milestones",
-        scoring: [
-          { framework: "consequentialism", score: 20 }
-        ]
-      },
-      {
-        id: "4b",
-        text: "Educational/informative content",
-        scoring: [
-          { framework: "virtue", score: 30 }
-        ]
-      },
-      {
-        id: "4c",
-        text: "Entertainment and humor",
-        scoring: [
-          { framework: "consequentialism", score: 20 },
+          { framework: "consequentialism", score: -20 },
           { framework: "virtue", score: -10 }
         ]
       },
       {
-        id: "4d",
-        text: "Social/political commentary",
+        id: "3b",
+        text: "I privately verify their well-being",
         scoring: [
-          { framework: "duty", score: 20 },
-          { framework: "virtue", score: 10 }
+          { framework: "virtue", score: 30 },
+          { framework: "duty", score: 20 }
         ]
-      }
-    ]
-  },
-  {
-    id: 5,
-    question: "How do you handle potentially controversial content?",
-    options: [
+      },
       {
-        id: "5a",
-        text: "Share with disclaimer",
+        id: "3c",
+        text: "I report suspicious activity to platforms",
         scoring: [
           { framework: "duty", score: 20 },
           { framework: "consequentialism", score: 10 }
         ]
       },
       {
+        id: "3d",
+        text: "I publicly question the changes",
+        scoring: [
+          { framework: "consequentialism", score: -30 },
+          { framework: "virtue", score: -20 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 4,
+    question: "When sharing group photos from events:",
+    options: [
+      {
+        id: "4a",
+        text: "I post immediately to maintain relevance",
+        scoring: [
+          { framework: "consequentialism", score: 20 },
+          { framework: "virtue", score: -30 }
+        ]
+      },
+      {
+        id: "4b",
+        text: "I verify everyone's comfort with facial recognition",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "virtue", score: 20 }
+        ]
+      },
+      {
+        id: "4c",
+        text: "I blur or edit sensitive details",
+        scoring: [
+          { framework: "virtue", score: 20 },
+          { framework: "duty", score: 20 }
+        ]
+      },
+      {
+        id: "4d",
+        text: "I trust my social circle's privacy settings",
+        scoring: [
+          { framework: "consequentialism", score: -10 },
+          { framework: "duty", score: -20 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    question: "Regarding my personal information visible online:",
+    options: [
+      {
+        id: "5a",
+        text: "I regularly search and audit my digital presence",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "virtue", score: 20 }
+        ]
+      },
+      {
         id: "5b",
-        text: "Avoid sharing entirely",
+        text: "I only worry when something happens",
+        scoring: [
+          { framework: "consequentialism", score: -20 },
+          { framework: "virtue", score: -10 }
+        ]
+      },
+      {
+        id: "5c",
+        text: "I maintain multiple separate online identities",
         scoring: [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
         ]
       },
       {
-        id: "5c",
-        text: "Share only in private groups",
-        scoring: [
-          { framework: "consequentialism", score: 20 }
-        ]
-      },
-      {
         id: "5d",
-        text: "Evaluate each case individually",
+        text: "I share everything openly for transparency",
         scoring: [
-          { framework: "virtue", score: 30 }
+          { framework: "consequentialism", score: -30 },
+          { framework: "duty", score: -20 }
         ]
       }
     ]
   }
 ];
+
