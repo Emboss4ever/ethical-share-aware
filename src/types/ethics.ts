@@ -1,4 +1,3 @@
-
 export interface EthicalFramework {
   id: string;
   name: string;
@@ -24,6 +23,8 @@ export interface QuizOption {
     framework: string;
     score: number;
   }[];
+  considerations?: string;
+  positiveAspect?: string;
 }
 
 export interface QuizQuestion {
@@ -33,4 +34,3 @@ export interface QuizQuestion {
 }
 
 export type QuizQuestionSet = QuizQuestion[];
-
