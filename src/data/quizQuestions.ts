@@ -1,20 +1,9 @@
-export interface QuizQuestion {
-  id: number;
-  question: string;
-  options: Array<{
-    id: string;
-    text: string;
-    scoring: {
-      framework: string;
-      score: number;
-    }[];
-  }>;
-}
+import { QuizQuestion } from "@/types/ethics";
 
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "How often do you post on social media?",
+    question: "[Social Media] How often do you post on social media?",
     options: [
       {
         id: "1a",
@@ -49,7 +38,7 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 2,
-    question: "What privacy settings do you typically use for your posts?",
+    question: "[Social Media] What privacy settings do you typically use for your posts?",
     options: [
       {
         id: "2a",
@@ -86,7 +75,7 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 3,
-    question: "How do you handle friend/follow requests?",
+    question: "[Social Media] How do you handle friend/follow requests?",
     options: [
       {
         id: "3a",
@@ -122,7 +111,7 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 4,
-    question: "What type of content do you most frequently share?",
+    question: "[Social Media] What type of content do you most frequently share?",
     options: [
       {
         id: "4a",
@@ -158,7 +147,7 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 5,
-    question: "How do you handle potentially controversial content?",
+    question: "[Social Media] How do you handle potentially controversial content?",
     options: [
       {
         id: "5a",
@@ -194,11 +183,11 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 6,
-    question: "Which principle do you value most when making decisions about sharing content?",
+    question: "[Ethics] When making moral decisions, which approach do you prefer?",
     options: [
       {
         id: "6a",
-        text: "Following clear moral rules and principles",
+        text: "Following clear moral rules and universal principles",
         scoring: [
           { framework: "duty", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -206,7 +195,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "6b",
-        text: "Maximizing positive outcomes for everyone involved",
+        text: "Evaluating outcomes and maximizing benefits for all",
         scoring: [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -10 }
@@ -214,7 +203,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "6c",
-        text: "Acting with wisdom and good character",
+        text: "Acting with wisdom and virtuous character",
         scoring: [
           { framework: "virtue", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -222,7 +211,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "6d",
-        text: "Balance between rules and outcomes",
+        text: "Balancing principles with practical outcomes",
         scoring: [
           { framework: "duty", score: 15 },
           { framework: "consequentialism", score: 15 }
@@ -232,11 +221,11 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 7,
-    question: "When faced with an ethical dilemma online, what guides your decision-making?",
+    question: "[Ethics] How do you typically approach ethical dilemmas?",
     options: [
       {
         id: "7a",
-        text: "Universal principles that should apply to everyone",
+        text: "By referring to established moral principles",
         scoring: [
           { framework: "duty", score: 30 },
           { framework: "virtue", score: -10 }
@@ -244,7 +233,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "7b",
-        text: "The potential impact on all stakeholders",
+        text: "By analyzing potential consequences",
         scoring: [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -10 }
@@ -252,7 +241,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "7c",
-        text: "What a person of good character would do",
+        text: "By considering what a virtuous person would do",
         scoring: [
           { framework: "virtue", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -260,7 +249,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "7d",
-        text: "Platform guidelines and community standards",
+        text: "By following community standards and guidelines",
         scoring: [
           { framework: "duty", score: 20 },
           { framework: "virtue", score: 10 }
@@ -270,11 +259,11 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 8,
-    question: "What matters most to you when sharing personal information online?",
+    question: "[Ethics] What matters most in determining if an action is ethical?",
     options: [
       {
         id: "8a",
-        text: "Following strict privacy principles regardless of circumstances",
+        text: "Whether it follows universal moral laws",
         scoring: [
           { framework: "duty", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -282,7 +271,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "8b",
-        text: "The potential benefits vs risks for everyone involved",
+        text: "The outcomes and impacts it produces",
         scoring: [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -10 }
@@ -290,7 +279,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "8c",
-        text: "Being authentic and maintaining integrity",
+        text: "If it reflects good character and wisdom",
         scoring: [
           { framework: "virtue", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -298,7 +287,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "8d",
-        text: "What feels right based on personal values",
+        text: "How well it aligns with personal values",
         scoring: [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
@@ -308,11 +297,11 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 9,
-    question: "How do you approach digital conflict resolution?",
+    question: "[Social Media] When deciding to share news or information, what guides your choice?",
     options: [
       {
         id: "9a",
-        text: "Follow established community guidelines strictly",
+        text: "Established fact-checking protocols",
         scoring: [
           { framework: "duty", score: 30 },
           { framework: "virtue", score: -10 }
@@ -320,7 +309,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "9b",
-        text: "Find solutions that benefit the most people",
+        text: "Potential impact on audience",
         scoring: [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -10 }
@@ -328,7 +317,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "9c",
-        text: "Act with wisdom and compassion",
+        text: "Personal judgment and integrity",
         scoring: [
           { framework: "virtue", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -336,7 +325,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "9d",
-        text: "Mediate based on fairness principles",
+        text: "Platform guidelines and policies",
         scoring: [
           { framework: "duty", score: 15 },
           { framework: "virtue", score: 15 }
@@ -346,11 +335,11 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 10,
-    question: "What best describes your view on digital ethics?",
+    question: "[Ethics] Which statement best describes your view on ethical decision-making?",
     options: [
       {
         id: "10a",
-        text: "There are universal rules we should all follow online",
+        text: "There are universal moral rules we must follow",
         scoring: [
           { framework: "duty", score: 30 },
           { framework: "consequentialism", score: -10 }
@@ -358,7 +347,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "10b",
-        text: "The right action is what creates the most good for the most people",
+        text: "The right action is what creates the most good",
         scoring: [
           { framework: "consequentialism", score: 30 },
           { framework: "virtue", score: -10 }
@@ -366,7 +355,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "10c",
-        text: "Being a good digital citizen is about developing character",
+        text: "Good character leads to right actions",
         scoring: [
           { framework: "virtue", score: 30 },
           { framework: "duty", score: -10 }
@@ -374,10 +363,10 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         id: "10d",
-        text: "Balance between rules and personal judgment",
+        text: "Balance between rules and consequences",
         scoring: [
           { framework: "duty", score: 15 },
-          { framework: "virtue", score: 15 }
+          { framework: "consequentialism", score: 15 }
         ]
       }
     ]
