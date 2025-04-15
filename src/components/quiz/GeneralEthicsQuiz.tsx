@@ -1,25 +1,27 @@
 
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { socialMediaQuiz } from "@/data/quizQuestions";
+import { generalEthicsQuiz } from "@/data/quizQuestions";
 import { ethicalFrameworks } from "@/data/frameworks";
 import { useToast } from "@/hooks/use-toast";
-import QuizQuestion from "./quiz/QuizQuestion";
-import QuizResults from "./quiz/QuizResults";
-import GeneralEthicsQuiz from "./quiz/GeneralEthicsQuiz";
-import { ResultScore } from "./quiz/types";
-import { Button } from "./ui/button";
+import QuizQuestion from "./QuizQuestion";
+import QuizResults from "./QuizResults";
+import { ResultScore } from "./types";
 
-const QuizCard = () => {
+interface GeneralEthicsQuizProps {
+  onClose: () => void;
+  mainQuizResults?: ResultScore[];
+}
+
+const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [results, setResults] = useState<ResultScore[]>([]);
-  const [showGeneralEthicsQuiz, setShowGeneralEthicsQuiz] = useState(false);
   const { toast } = useToast();
 
-  const currentQuestion = socialMediaQuiz[currentQuestionIndex];
-  const totalQuestions = socialMediaQuiz.length;
+  const currentQuestion = generalEthicsQuiz[currentQuestionIndex];
+  const totalQuestions = generalEthicsQuiz.length;
   const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
 
   const handleOptionSelect = (optionId: string) => {
@@ -60,7 +62,7 @@ const QuizCard = () => {
     };
 
     selectedOptions.forEach((optionId, questionIndex) => {
-      const question = socialMediaQuiz[questionIndex];
+      const question = generalEthicsQuiz[questionIndex];
       const selectedOption = question.options.find(opt => opt.id === optionId);
       
       if (selectedOption) {
@@ -70,7 +72,7 @@ const QuizCard = () => {
       }
     });
 
-    const maxPossibleScorePerFramework = 100; // Adjusted for scoring system
+    const maxPossibleScorePerFramework = 100;
     
     const resultsArray: ResultScore[] = Object.entries(frameworkScores)
       .map(([frameworkId, score]) => ({
@@ -88,28 +90,14 @@ const QuizCard = () => {
     setSelectedOptions([]);
     setQuizCompleted(false);
     setResults([]);
-    setShowGeneralEthicsQuiz(false);
   };
-
-  const handleTakeGeneralEthicsQuiz = () => {
-    setShowGeneralEthicsQuiz(true);
-  };
-
-  if (showGeneralEthicsQuiz) {
-    return (
-      <GeneralEthicsQuiz 
-        onClose={() => setShowGeneralEthicsQuiz(false)} 
-        mainQuizResults={results}
-      />
-    );
-  }
 
   return (
     <Card className="w-full max-w-3xl mx-auto shadow-lg">
       <CardHeader>
-        <CardTitle className="text-2xl">Social Media Ethics Quiz</CardTitle>
+        <CardTitle className="text-2xl">General Ethics Framework Quiz</CardTitle>
         <CardDescription>
-          Answer these questions to discover your ethical framework alignment in social media contexts
+          Discover your ethical framework alignment in general (non-social media) contexts
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -130,14 +118,16 @@ const QuizCard = () => {
               results={results}
               selectedOptions={selectedOptions}
               onReset={resetQuiz}
+              isGeneralEthics={true}
+              mainQuizResults={mainQuizResults}
             />
-            <div className="mt-6 text-center">
-              <p className="mb-4 text-gray-600">
-                Curious how your general ethical views compare to your social media behavior?
-              </p>
-              <Button onClick={handleTakeGeneralEthicsQuiz}>
-                Take the General Ethics Quiz
-              </Button>
+            <div className="mt-4">
+              <button 
+                onClick={onClose}
+                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
+              >
+                Back to Main Quiz
+              </button>
             </div>
           </>
         )}
@@ -146,4 +136,4 @@ const QuizCard = () => {
   );
 };
 
-export default QuizCard;
+export default GeneralEthicsQuiz;

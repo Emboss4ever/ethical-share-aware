@@ -1,9 +1,10 @@
+
 import { QuizQuestionSet } from "@/types/ethics";
 
 export const socialMediaQuestions: QuizQuestionSet = [
   {
     id: 1,
-    question: "[Social Media] How often do you post on social media?",
+    question: "How often do you post on social media?",
     options: [
       {
         id: "1a",
@@ -38,7 +39,7 @@ export const socialMediaQuestions: QuizQuestionSet = [
   },
   {
     id: 2,
-    question: "[Social Media] What privacy settings do you typically use for your posts?",
+    question: "What privacy settings do you typically use for your posts?",
     options: [
       {
         id: "2a",
@@ -75,7 +76,7 @@ export const socialMediaQuestions: QuizQuestionSet = [
   },
   {
     id: 3,
-    question: "[Social Media] How do you handle friend/follow requests?",
+    question: "How do you handle friend/follow requests?",
     options: [
       {
         id: "3a",
@@ -111,7 +112,7 @@ export const socialMediaQuestions: QuizQuestionSet = [
   },
   {
     id: 4,
-    question: "[Social Media] What type of content do you most frequently share?",
+    question: "What type of content do you most frequently share?",
     options: [
       {
         id: "4a",
@@ -147,7 +148,7 @@ export const socialMediaQuestions: QuizQuestionSet = [
   },
   {
     id: 5,
-    question: "[Social Media] How do you handle potentially controversial content?",
+    question: "How do you handle potentially controversial content?",
     options: [
       {
         id: "5a",

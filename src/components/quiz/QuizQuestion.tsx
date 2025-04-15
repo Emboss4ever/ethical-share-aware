@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { QuizQuestion as QuizQuestionType } from "@/data/quizQuestions";
+import { QuizQuestion as QuizQuestionType } from "@/types/ethics";
 
 interface QuizQuestionProps {
   question: QuizQuestionType;

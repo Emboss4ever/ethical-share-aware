@@ -1,13 +1,23 @@
+
 import { ethicalFrameworks } from "@/data/frameworks";
-import { quizQuestions } from "@/data/quizQuestions";
+import { socialMediaQuiz, generalEthicsQuiz } from "@/data/quizQuestions";
 
 interface ScoringBreakdownProps {
   index: number;
   selectedOption: string;
+  isGeneralEthics?: boolean;
 }
 
-const ScoringBreakdown = ({ index, selectedOption }: ScoringBreakdownProps) => {
-  const question = quizQuestions[index];
+const ScoringBreakdown = ({ 
+  index, 
+  selectedOption,
+  isGeneralEthics = false 
+}: ScoringBreakdownProps) => {
+  const questions = isGeneralEthics ? generalEthicsQuiz : socialMediaQuiz;
+  const question = questions[index];
+  
+  if (!question) return null;
+  
   const selectedOptionData = question.options.find(
     (opt) => opt.id === selectedOption
   );

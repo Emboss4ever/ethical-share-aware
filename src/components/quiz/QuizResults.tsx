@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { ethicalFrameworks, quizScoring } from "@/data/frameworks";
+import { ethicalFrameworks } from "@/data/frameworks";
 import { ArrowRight } from "lucide-react";
 import { ResultScore } from "./types";
 import ScoringBreakdown from "./ScoringBreakdown";
@@ -8,13 +9,50 @@ interface QuizResultsProps {
   results: ResultScore[];
   selectedOptions: string[];
   onReset: () => void;
+  isGeneralEthics?: boolean;
+  mainQuizResults?: ResultScore[];
 }
 
-const QuizResults = ({ results, selectedOptions, onReset }: QuizResultsProps) => {
+const QuizResults = ({ 
+  results, 
+  selectedOptions, 
+  onReset,
+  isGeneralEthics = false,
+  mainQuizResults
+}: QuizResultsProps) => {
   const topFramework = results[0];
   const frameworkInfo = ethicalFrameworks.find(
     (framework) => framework.id === topFramework.frameworkId
   );
+
+  // Compare main quiz with general ethics if available
+  const renderComparison = () => {
+    if (!isGeneralEthics || !mainQuizResults) return null;
+
+    const mainTopFramework = mainQuizResults[0];
+    const mainFrameworkInfo = ethicalFrameworks.find(
+      (framework) => framework.id === mainTopFramework.frameworkId
+    );
+
+    const isMatch = topFramework.frameworkId === mainTopFramework.frameworkId;
+
+    return (
+      <div className="mt-8 p-4 bg-gray-50 rounded-lg border">
+        <h4 className="text-lg font-medium mb-2">Comparison with Social Media Ethics</h4>
+        <p className="mb-4">
+          {isMatch 
+            ? `Your general ethical framework (${frameworkInfo?.name}) matches your social media ethical approach (${mainFrameworkInfo?.name}).` 
+            : `Your general ethical framework (${frameworkInfo?.name}) differs from your social media ethical approach (${mainFrameworkInfo?.name}).`}
+        </p>
+        {!isMatch && (
+          <p className="text-sm text-gray-600">
+            This suggests that your behavior on social media might be influenced by factors beyond your core ethical beliefs. 
+            Consider how the digital environment affects your ethical decision-making.
+          </p>
+        )}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -28,6 +66,11 @@ const QuizResults = ({ results, selectedOptions, onReset }: QuizResultsProps) =>
         <p className="text-gray-600 max-w-2xl mx-auto">
           {frameworkInfo?.description}
         </p>
+        {isGeneralEthics && (
+          <p className="mt-2 text-sm text-gray-500">
+            This reflects your general ethical framework, not specific to social media contexts.
+          </p>
+        )}
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -54,14 +97,17 @@ const QuizResults = ({ results, selectedOptions, onReset }: QuizResultsProps) =>
         })}
       </div>
 
+      {renderComparison()}
+
       <div className="mt-8">
         <h4 className="text-lg font-medium mb-4">Your Answers Analysis</h4>
         <div className="space-y-4">
-          {quizScoring.map((_, index) => (
+          {selectedOptions.map((option, index) => (
             <ScoringBreakdown
               key={index}
               index={index}
-              selectedOption={selectedOptions[index]}
+              selectedOption={option}
+              isGeneralEthics={isGeneralEthics}
             />
           ))}
         </div>
