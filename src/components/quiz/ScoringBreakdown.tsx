@@ -1,6 +1,9 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { risksConfig } from '@/data/risksConfig';
+import { socialMediaQuiz, generalEthicsQuiz } from '@/data/quizQuestions';
+import { ethicalFrameworks } from '@/data/ethicalFrameworks';
 
 interface ScoringBreakdownProps {
   index: number;
