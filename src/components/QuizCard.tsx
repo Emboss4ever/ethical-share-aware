@@ -1,12 +1,10 @@
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { socialMediaQuiz } from "@/data/quizQuestions";
-import { ethicalFrameworks } from "@/data/frameworks";
 import { useToast } from "@/hooks/use-toast";
 import QuizQuestion from "./quiz/QuizQuestion";
 import QuizResults from "./quiz/QuizResults";
-import GeneralEthicsQuiz from "./quiz/GeneralEthicsQuiz";
 import { ResultScore } from "./quiz/types";
 import { Button } from "./ui/button";
 
@@ -15,7 +13,7 @@ const QuizCard = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [results, setResults] = useState<ResultScore[]>([]);
-  const [showGeneralEthicsQuiz, setShowGeneralEthicsQuiz] = useState(false);
+  const navigate = useNavigate();
   const { toast } = useToast();
 
   const currentQuestion = socialMediaQuiz[currentQuestionIndex];
@@ -88,21 +86,11 @@ const QuizCard = () => {
     setSelectedOptions([]);
     setQuizCompleted(false);
     setResults([]);
-    setShowGeneralEthicsQuiz(false);
   };
 
   const handleTakeGeneralEthicsQuiz = () => {
-    setShowGeneralEthicsQuiz(true);
+    navigate('/general-ethics');
   };
-
-  if (showGeneralEthicsQuiz) {
-    return (
-      <GeneralEthicsQuiz 
-        onClose={() => setShowGeneralEthicsQuiz(false)} 
-        mainQuizResults={results}
-      />
-    );
-  }
 
   return (
     <Card className="w-full max-w-3xl mx-auto shadow-lg">

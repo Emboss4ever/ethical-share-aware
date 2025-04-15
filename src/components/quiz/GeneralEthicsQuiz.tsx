@@ -1,15 +1,15 @@
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { generalEthicsQuiz } from "@/data/quizQuestions";
-import { ethicalFrameworks } from "@/data/frameworks";
 import { useToast } from "@/hooks/use-toast";
 import QuizQuestion from "./QuizQuestion";
 import QuizResults from "./QuizResults";
 import { ResultScore } from "./types";
+import { Button } from "@/components/ui/button";
 
 interface GeneralEthicsQuizProps {
-  onClose: () => void;
+  onClose?: () => void;
   mainQuizResults?: ResultScore[];
 }
 
@@ -18,6 +18,7 @@ const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps)
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [results, setResults] = useState<ResultScore[]>([]);
+  const navigate = useNavigate();
   const { toast } = useToast();
 
   const currentQuestion = generalEthicsQuiz[currentQuestionIndex];
@@ -92,6 +93,14 @@ const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps)
     setResults([]);
   };
 
+  const handleBackToMain = () => {
+    if (onClose) {
+      onClose();
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <Card className="w-full max-w-3xl mx-auto shadow-lg">
       <CardHeader>
@@ -122,12 +131,13 @@ const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps)
               mainQuizResults={mainQuizResults}
             />
             <div className="mt-4">
-              <button 
-                onClick={onClose}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
+              <Button 
+                variant="outline"
+                onClick={handleBackToMain}
+                className="px-4 py-2"
               >
                 Back to Main Quiz
-              </button>
+              </Button>
             </div>
           </>
         )}
