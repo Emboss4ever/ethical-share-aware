@@ -1,8 +1,12 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const Risks = () => {
+  const navigate = useNavigate();
   const digitalRisks = [
     {
       id: "osint",
@@ -13,7 +17,8 @@ const Risks = () => {
         "Pattern-of-life analysis",
         "Social engineering attacks",
         "Family and friend network mapping"
-      ]
+      ],
+      link: "/risks/osint"
     },
     {
       id: "deepfakes",
@@ -24,7 +29,8 @@ const Risks = () => {
         "Impersonate you in scams",
         "Damage your reputation",
         "Generate misleading voice clips"
-      ]
+      ],
+      link: "/risks/deepfakes"
     },
     {
       id: "identity-theft",
@@ -35,7 +41,8 @@ const Risks = () => {
         "Apply for credit cards",
         "File fake tax returns",
         "Access your existing accounts"
-      ]
+      ],
+      link: "/risks/identity-theft"
     },
     {
       id: "data-theft",
@@ -46,12 +53,22 @@ const Risks = () => {
         "Third-party app access",
         "Tracking cookies and analytics",
         "Location data collection"
-      ]
+      ],
+      link: "/risks/data-theft"
     }
   ];
 
   return (
     <div className="container mx-auto py-8 px-4">
+      <Button 
+        variant="ghost" 
+        onClick={() => navigate(-1)} 
+        className="mb-6"
+      >
+        <ArrowLeft className="mr-2 h-4 w-4" />
+        Back to Results
+      </Button>
+
       <h1 className="text-3xl font-bold mb-6">Digital Privacy Risks and Threats</h1>
       <p className="text-gray-600 mb-8">
         Understanding the potential risks of your social media activity can help you make more informed decisions about what you share online.
@@ -59,19 +76,25 @@ const Risks = () => {
       
       <div className="grid gap-6 md:grid-cols-2">
         {digitalRisks.map((risk) => (
-          <Card key={risk.id}>
-            <CardHeader>
-              <CardTitle>{risk.title}</CardTitle>
-              <CardDescription>{risk.description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-2">
-                {risk.risks.map((item, index) => (
-                  <li key={index} className="text-gray-600">{item}</li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <Link 
+            to={risk.link} 
+            key={risk.id}
+            className="block transition-transform hover:scale-[1.02]"
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle className="underline">{risk.title}</CardTitle>
+                <CardDescription>{risk.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2">
+                  {risk.risks.map((item, index) => (
+                    <li key={index} className="text-gray-600">{item}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
