@@ -16,3 +16,21 @@ export interface QuizScoring {
     explanation: string;
   }[];
 }
+
+export interface QuizOption {
+  id: string;
+  text: string;
+  scoring: {
+    framework: string;
+    score: number;
+  }[];
+}
+
+export interface QuizQuestion {
+  id: number;
+  question: string;
+  options: QuizOption[];
+}
+
+export type QuizQuestionSet = QuizQuestion[];
+
