@@ -27,7 +27,7 @@ export const ethicalFrameworks: EthicalFramework[] = [
     socialMediaExample: "Deciding not to share a controversial joke because it might harm relationships or offend others, despite innocent intentions."
   },
   {
-    id: "virtue ethics",
+    id: "virtue",
     name: "Virtue Ethics",
     description: "Emphasizes developing good character traits that guide ethical behavior. Focuses on being a good person rather than following rules or calculating consequences.",
     principles: [
