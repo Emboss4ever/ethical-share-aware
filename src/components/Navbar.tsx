@@ -1,4 +1,3 @@
-
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -27,7 +26,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile menu button */}
         <div className="md:hidden">
           <Button
             variant="ghost"
@@ -39,7 +37,6 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-8">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-gray-700 hover:text-purple-600 transition-colors">
@@ -58,16 +55,12 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a href="#frameworks" className="text-gray-700 hover:text-purple-600 transition-colors">
-            Frameworks
-          </a>
           <a href="#about" className="text-gray-700 hover:text-purple-600 transition-colors">
             About
           </a>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={cn(
           "md:hidden absolute left-0 right-0 bg-white shadow-md z-10 transition-all duration-300 ease-in-out",
@@ -89,13 +82,6 @@ const Navbar = () => {
           >
             General Ethics Quiz
           </Link>
-          <a
-            href="#frameworks"
-            className="text-gray-700 hover:text-purple-600 py-2 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Frameworks
-          </a>
           <a
             href="#about"
             className="text-gray-700 hover:text-purple-600 py-2 transition-colors"

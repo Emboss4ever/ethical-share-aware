@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { ethicalFrameworks } from "@/data/frameworks";
 import { ArrowRight } from "lucide-react";
 import { ResultScore } from "./types";
 import ScoringBreakdown from "./ScoringBreakdown";
+import EthicalFrameworks from "../EthicalFrameworks";
 
 interface QuizResultsProps {
   results: ResultScore[];
@@ -25,7 +25,6 @@ const QuizResults = ({
     (framework) => framework.id === topFramework.frameworkId
   );
 
-  // Compare main quiz with general ethics if available
   const renderComparison = () => {
     if (!isGeneralEthics || !mainQuizResults) return null;
 
@@ -111,6 +110,11 @@ const QuizResults = ({
             />
           ))}
         </div>
+      </div>
+
+      <div className="mt-12 mb-8">
+        <h3 className="text-2xl font-bold text-center mb-6">Understanding Ethical Frameworks</h3>
+        <EthicalFrameworks />
       </div>
 
       <div className="flex justify-between mt-6">
