@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { ethicalFrameworks } from "@/data/frameworks";
+import { ethicalFrameworks } from "@/data/ethicalFrameworks";
 import { ArrowRight } from "lucide-react";
 import { ResultScore } from "./types";
 import ScoringBreakdown from "./ScoringBreakdown";
