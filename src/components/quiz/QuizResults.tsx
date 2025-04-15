@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ethicalFrameworks } from "@/data/frameworks";
 import { ArrowRight } from "lucide-react";
 import { ResultScore } from "./types";
 import ScoringBreakdown from "./ScoringBreakdown";
-import EthicalFrameworks from "../EthicalFrameworks";
+import { useNavigate } from "react-router-dom";
 
 interface QuizResultsProps {
   results: ResultScore[];
@@ -21,7 +20,7 @@ const QuizResults = ({
   isGeneralEthics = false,
   mainQuizResults
 }: QuizResultsProps) => {
-  const [showFrameworks, setShowFrameworks] = useState(false);
+  const navigate = useNavigate();
   const topFramework = results[0];
   const frameworkInfo = ethicalFrameworks.find(
     (framework) => framework.id === topFramework.frameworkId
@@ -114,18 +113,11 @@ const QuizResults = ({
         </div>
       </div>
 
-      {showFrameworks && (
-        <div className="mt-12 mb-8">
-          <h3 className="text-2xl font-bold text-center mb-6">Understanding Ethical Frameworks</h3>
-          <EthicalFrameworks />
-        </div>
-      )}
-
       <div className="flex justify-between mt-6">
         <Button variant="outline" onClick={onReset}>
           Retake Quiz
         </Button>
-        <Button onClick={() => setShowFrameworks(true)}>
+        <Button onClick={() => navigate("/frameworks")}>
           Learn More About These Frameworks <ArrowRight size={16} className="ml-2" />
         </Button>
       </div>
