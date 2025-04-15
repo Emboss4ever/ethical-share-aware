@@ -4,113 +4,288 @@ import { QuizQuestionSet } from "@/types/ethics";
 export const socialMediaQuestions: QuizQuestionSet = [
   {
     id: 1,
-    question: "When sharing a photo, I consider metadata and location information visible to others:",
+    question: "How often do you post on social media?",
     options: [
       {
         id: "1a",
-        text: "I never think about hidden data in my posts",
+        text: "Multiple times per day",
         scoring: [
-          { framework: "consequentialism", score: -20 },
+          { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -10 }
         ]
       },
       {
         id: "1b",
-        text: "I carefully strip sensitive data before sharing",
+        text: "Once daily",
         scoring: [
-          { framework: "duty", score: 30 },
-          { framework: "virtue", score: 20 }
+          { framework: "consequentialism", score: 10 }
         ]
       },
       {
         id: "1c",
-        text: "I assume platforms handle that automatically",
+        text: "A few times per week",
         scoring: [
-          { framework: "consequentialism", score: -10 },
-          { framework: "duty", score: -20 }
+          { framework: "duty", score: 10 }
         ]
       },
       {
         id: "1d",
-        text: "I review each post's data individually",
+        text: "Only when something significant happens",
         scoring: [
-          { framework: "virtue", score: 30 },
-          { framework: "duty", score: 20 }
+          { framework: "virtue", score: 20 }
         ]
       }
     ]
   },
   {
     id: 2,
-    question: "When someone messages me claiming to be an old friend:",
+    question: "What privacy settings do you typically use for your posts?",
     options: [
       {
         id: "2a",
-        text: "I engage immediately if they seem familiar",
+        text: "Public - everyone can see",
         scoring: [
-          { framework: "consequentialism", score: -30 },
-          { framework: "virtue", score: -20 }
+          { framework: "consequentialism", score: 30 },
+          { framework: "duty", score: -10 }
         ]
       },
       {
         id: "2b",
-        text: "I verify their identity through mutual connections",
+        text: "Friends only",
         scoring: [
-          { framework: "duty", score: 30 },
-          { framework: "virtue", score: 20 }
-        ]
-      },
-      {
-        id: "2c",
-        text: "I ignore all unexpected connection attempts",
-        scoring: [
-          { framework: "virtue", score: 10 },
           { framework: "duty", score: 20 }
         ]
       },
       {
-        id: "2d",
-        text: "I share limited information while building trust",
+        id: "2c",
+        text: "Custom lists based on content type",
         scoring: [
-          { framework: "consequentialism", score: 10 },
-          { framework: "virtue", score: -10 }
+          { framework: "virtue", score: 20 },
+          { framework: "duty", score: 10 }
+        ]
+      },
+      {
+        id: "2d",
+        text: "Mostly private with occasional public posts",
+        scoring: [
+          { framework: "virtue", score: 10 },
+          { framework: "consequentialism", score: 10 }
         ]
       }
     ]
   },
   {
     id: 3,
-    question: "If I notice subtle changes in a friend's online behavior:",
+    question: "How do you handle friend/follow requests?",
     options: [
       {
         id: "3a",
-        text: "I assume they're exploring new interests",
+        text: "Accept everyone",
         scoring: [
-          { framework: "consequentialism", score: -20 },
-          { framework: "virtue", score: -10 }
+          { framework: "consequentialism", score: 30 },
+          { framework: "duty", score: -20 }
         ]
       },
       {
         id: "3b",
-        text: "I privately verify their well-being",
+        text: "Only people I know in real life",
         scoring: [
-          { framework: "virtue", score: 30 },
-          { framework: "duty", score: 20 }
+          { framework: "duty", score: 30 }
         ]
       },
       {
         id: "3c",
-        text: "I report suspicious activity to platforms",
+        text: "Based on mutual connections and profile review",
+        scoring: [
+          { framework: "virtue", score: 20 }
+        ]
+      },
+      {
+        id: "3d",
+        text: "Strict verification process",
+        scoring: [
+          { framework: "duty", score: 20 },
+          { framework: "virtue", score: 10 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 4,
+    question: "What type of content do you most frequently share?",
+    options: [
+      {
+        id: "4a",
+        text: "Personal achievements and milestones",
+        scoring: [
+          { framework: "consequentialism", score: 20 }
+        ]
+      },
+      {
+        id: "4b",
+        text: "Educational/informative content",
+        scoring: [
+          { framework: "virtue", score: 30 }
+        ]
+      },
+      {
+        id: "4c",
+        text: "Entertainment and humor",
+        scoring: [
+          { framework: "consequentialism", score: 20 },
+          { framework: "virtue", score: -10 }
+        ]
+      },
+      {
+        id: "4d",
+        text: "Social/political commentary",
+        scoring: [
+          { framework: "duty", score: 20 },
+          { framework: "virtue", score: 10 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    question: "How do you handle potentially controversial content?",
+    options: [
+      {
+        id: "5a",
+        text: "Share with disclaimer",
         scoring: [
           { framework: "duty", score: 20 },
           { framework: "consequentialism", score: 10 }
         ]
       },
       {
-        id: "3d",
-        text: "I publicly question the changes",
+        id: "5b",
+        text: "Avoid sharing entirely",
         scoring: [
-          { framework: "consequentialism", score: -30 },
+          { framework: "virtue", score: 20 },
+          { framework: "duty", score: 10 }
+        ]
+      },
+      {
+        id: "5c",
+        text: "Share only in private groups",
+        scoring: [
+          { framework: "consequentialism", score: 20 }
+        ]
+      },
+      {
+        id: "5d",
+        text: "Evaluate each case individually",
+        scoring: [
+          { framework: "virtue", score: 30 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 6,
+    question: "How often do you review your privacy settings?",
+    options: [
+      {
+        id: "6a",
+        text: "Never",
+        scoring: [
+          { framework: "consequentialism", score: -10 },
+          { framework: "duty", score: -20 }
+        ]
+      },
+      {
+        id: "6b",
+        text: "Annually",
+        scoring: [
+          { framework: "duty", score: 10 }
+        ]
+      },
+      {
+        id: "6c",
+        text: "Monthly",
+        scoring: [
+          { framework: "duty", score: 30 }
+        ]
+      },
+      {
+        id: "6d",
+        text: "After every platform update",
+        scoring: [
+          { framework: "virtue", score: 20 },
+          { framework: "duty", score: 20 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 7,
+    question: "When sharing personal achievements online, what's your primary consideration?",
+    options: [
+      {
+        id: "7a",
+        text: "I share immediately to maximize engagement",
+        scoring: [
+          { framework: "consequentialism", score: 20 },
+          { framework: "virtue", score: -10 }
+        ]
+      },
+      {
+        id: "7b",
+        text: "I carefully consider potential future implications",
+        scoring: [
+          { framework: "duty", score: 20 },
+          { framework: "consequentialism", score: 10 }
+        ]
+      },
+      {
+        id: "7c",
+        text: "I only share if it might benefit others",
+        scoring: [
+          { framework: "virtue", score: 30 }
+        ]
+      },
+      {
+        id: "7d",
+        text: "I share based on established rules",
+        scoring: [
+          { framework: "duty", score: 30 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 8,
+    question: "How do you approach sharing photos that include others?",
+    options: [
+      {
+        id: "8a",
+        text: "Always ask for permission first",
+        scoring: [
+          { framework: "duty", score: 30 }
+        ]
+      },
+      {
+        id: "8b",
+        text: "Share and remove if someone objects",
+        scoring: [
+          { framework: "consequentialism", score: 20 },
+          { framework: "duty", score: -10 }
+        ]
+      },
+      {
+        id: "8c",
+        text: "Only share in private groups based on moral principles",
+        scoring: [
+          { framework: "virtue", score: 20 },
+          { framework: "duty", score: 10 }
+        ]
+      },
+      {
+        id: "8d",
+        text: "Tag everyone to maximize utility",
+        scoring: [
+          { framework: "consequentialism", score: 30 },
           { framework: "virtue", score: -20 }
         ]
       }
@@ -193,4 +368,3 @@ export const socialMediaQuestions: QuizQuestionSet = [
     ]
   }
 ];
-
