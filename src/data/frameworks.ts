@@ -1,5 +1,3 @@
 
-export * from '@/types/ethics';
-export * from './ethicalFrameworks';
-export * from './quizScoring';
-export * from './quizQuestions';
+// Remove this file as it only re-exports things
+<lov-delete file_path="src/data/frameworks.ts" />
