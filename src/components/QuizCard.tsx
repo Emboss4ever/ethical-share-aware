@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +8,7 @@ import QuizQuestion from "./quiz/QuizQuestion";
 import QuizResults from "./quiz/QuizResults";
 import { ResultScore } from "./quiz/types";
 import { Button } from "./ui/button";
+import "./quiz/Quiz.css";
 
 const QuizCard = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

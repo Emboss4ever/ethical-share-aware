@@ -21,28 +21,28 @@ const DataTheftRisks = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Data Theft and Privacy Breaches</CardTitle>
+          <CardTitle>Data Theft</CardTitle>
           <CardDescription>
-            Your personal information can be compromised through various digital channels.
+            Personal information collected from social media can be used without consent.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
             <h3 className="text-lg font-semibold mb-2">Key Risks</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Platform data breaches exposing personal information</li>
-              <li>Third-party app unauthorized data access</li>
-              <li>Tracking cookies collecting behavioral data</li>
-              <li>Location data harvesting</li>
+              <li>Unauthorized collection of personal information</li>
+              <li>Metadata extraction from photos and posts</li>
+              <li>Cross-platform data aggregation</li>
+              <li>AI-powered profiling and prediction</li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Prevention Measures</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Review app permissions regularly</li>
-              <li>Use privacy-focused browser settings</li>
-              <li>Disable location tracking when not needed</li>
-              <li>Regularly delete unused accounts and data</li>
+              <li>Regularly audit privacy settings across platforms</li>
+              <li>Use metadata removal tools before sharing photos</li>
+              <li>Limit personal information shared in profiles</li>
+              <li>Be cautious with third-party applications connected to social accounts</li>
             </ul>
           </div>
         </CardContent>

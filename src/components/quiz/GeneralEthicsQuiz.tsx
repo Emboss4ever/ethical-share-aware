@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,19 +8,20 @@ import QuizQuestion from "./QuizQuestion";
 import QuizResults from "./QuizResults";
 import { ResultScore } from "./types";
 import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import "./Quiz.css";
 
 interface GeneralEthicsQuizProps {
   onClose?: () => void;
-  mainQuizResults?: ResultScore[];
 }
 
-const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps) => {
+const GeneralEthicsQuiz = ({ onClose }: GeneralEthicsQuizProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [results, setResults] = useState<ResultScore[]>([]);
-  const navigate = useNavigate();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const currentQuestion = generalEthicsQuiz[currentQuestionIndex];
   const totalQuestions = generalEthicsQuiz.length;
@@ -93,20 +95,28 @@ const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps)
     setResults([]);
   };
 
-  const handleBackToMain = () => {
-    if (onClose) {
-      onClose();
-    } else {
-      navigate('/');
-    }
+  const handleBackToSocialMediaQuiz = () => {
+    navigate('/');
   };
 
   return (
     <Card className="w-full max-w-3xl mx-auto shadow-lg">
-      <CardHeader>
-        <CardTitle className="text-2xl">General Ethics Framework Quiz</CardTitle>
+      <CardHeader className="flex flex-col space-y-2">
+        {onClose && (
+          <div className="self-start">
+            <Button 
+              variant="ghost" 
+              onClick={onClose} 
+              className="h-9 w-9 p-0 mr-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span className="sr-only">Back</span>
+            </Button>
+          </div>
+        )}
+        <CardTitle className="text-2xl">General Ethics Quiz</CardTitle>
         <CardDescription>
-          Discover your ethical framework alignment in general (non-social media) contexts
+          Answer these questions to discover your ethical framework alignment in general contexts
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -128,15 +138,10 @@ const GeneralEthicsQuiz = ({ onClose, mainQuizResults }: GeneralEthicsQuizProps)
               selectedOptions={selectedOptions}
               onReset={resetQuiz}
               isGeneralEthics={true}
-              mainQuizResults={mainQuizResults}
             />
-            <div className="mt-4">
-              <Button 
-                variant="outline"
-                onClick={handleBackToMain}
-                className="px-4 py-2"
-              >
-                Back to Main Quiz
+            <div className="mt-6 text-center">
+              <Button onClick={handleBackToSocialMediaQuiz}>
+                Return to Social Media Ethics
               </Button>
             </div>
           </>
