@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { quizQuestions } from "@/data/quizQuestions";
 import { ethicalFrameworks } from "@/data/frameworks";
 import { useToast } from "@/hooks/use-toast";
@@ -50,28 +50,30 @@ const QuizCard = () => {
   };
 
   const calculateResults = () => {
-    const frameworkScores: Record<string, number> = {};
-    
-    ethicalFrameworks.forEach(framework => {
-      frameworkScores[framework.id] = 0;
-    });
+    const frameworkScores: Record<string, number> = {
+      duty: 0,
+      consequentialism: 0,
+      virtue: 0
+    };
 
     selectedOptions.forEach((optionId, questionIndex) => {
       const question = quizQuestions[questionIndex];
-      const selectedOption = question.options.find(option => option.id === optionId);
+      const selectedOption = question.options.find(opt => opt.id === optionId);
       
       if (selectedOption) {
-        frameworkScores[selectedOption.framework] += selectedOption.score;
+        selectedOption.scoring.forEach(score => {
+          frameworkScores[score.framework] += score.score;
+        });
       }
     });
 
-    const maxPossibleScorePerFramework = 9;
+    const maxPossibleScorePerFramework = 100; // Adjusted for new scoring system
     
     const resultsArray: ResultScore[] = Object.entries(frameworkScores)
       .map(([frameworkId, score]) => ({
         frameworkId,
         score,
-        percentage: (score / maxPossibleScorePerFramework) * 100
+        percentage: Math.max(0, Math.min(100, (score / maxPossibleScorePerFramework) * 100))
       }))
       .sort((a, b) => b.percentage - a.percentage);
 
