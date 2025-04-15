@@ -13,8 +13,7 @@ export const frequencyQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -10 }
         ],
-        considerations: "Frequent posting may lead to oversharing personal information and could impact your digital footprint. Consider the long-term implications of maintaining such an active online presence.",
-        positiveAspect: "Helps maintain strong social connections and regular engagement with your community."
+        considerations: "Frequent posting helps maintain strong social connections and regular engagement with your community. However, it may lead to oversharing personal information and could impact your digital footprint. Consider the long-term implications of maintaining such an active online presence."
       },
       {
         id: "1b",
@@ -22,8 +21,7 @@ export const frequencyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "Daily updates still require careful content curation and awareness of your audience's preferences.",
-        positiveAspect: "Provides consistent engagement while maintaining a balanced approach to social media use."
+        considerations: "Daily updates provide consistent engagement while maintaining a balanced approach to social media use. This requires careful content curation and awareness of your audience's preferences."
       },
       {
         id: "1c",
@@ -31,8 +29,7 @@ export const frequencyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 10 }
         ],
-        considerations: "Even less frequent posting requires attention to privacy settings and content appropriateness.",
-        positiveAspect: "Allows for more thoughtful and meaningful content sharing."
+        considerations: "This moderate frequency allows for more thoughtful and meaningful content sharing. Even less frequent posting requires attention to privacy settings and content appropriateness."
       },
       {
         id: "1d",
@@ -40,8 +37,7 @@ export const frequencyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 20 }
         ],
-        considerations: "Important to maintain privacy awareness even with occasional posts, as significant events might involve sensitive information.",
-        positiveAspect: "Focuses on quality over quantity and maintains authenticity in online presence."
+        considerations: "This approach focuses on quality over quantity and maintains authenticity in online presence. Important to maintain privacy awareness even with occasional posts, as significant events might involve sensitive information."
       }
     ]
   }

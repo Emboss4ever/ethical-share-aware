@@ -13,8 +13,7 @@ export const privacyQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -10 }
         ],
-        considerations: "Public posts can expose personal information to a wider audience, which may not be appropriate for all situations.",
-        positiveAspect: "Allows for easy sharing of content and can be useful for reaching a broad audience."
+        considerations: "Public posts allow for easy sharing of content and can be useful for reaching a broad audience. However, this can expose personal information to a wider audience, which may not be appropriate for all situations."
       },
       {
         id: "2b",
@@ -22,8 +21,7 @@ export const privacyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 20 }
         ],
-        considerations: "Friends-only posts provide a more controlled environment for sharing content, but may limit visibility.",
-        positiveAspect: "Maintains privacy and control over who can see your posts."
+        considerations: "Friends-only posts provide a more controlled environment for sharing content while maintaining privacy and control over who can see your posts. However, this may limit visibility and potential connections."
       },
       {
         id: "2c",
@@ -32,8 +30,7 @@ export const privacyQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
         ],
-        considerations: "Custom lists allow for more targeted sharing of content, but may require careful consideration of who to include.",
-        positiveAspect: "Balances privacy and control over who can see your posts."
+        considerations: "Custom lists allow for more targeted sharing of content while balancing privacy and control. This approach requires careful consideration of audience segmentation but provides optimal content control."
       },
       {
         id: "2d",
@@ -42,8 +39,7 @@ export const privacyQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 10 },
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "A mix of private and public posts allows for a balance between privacy and visibility, but requires careful consideration of who to share with.",
-        positiveAspect: "Maintains privacy while still allowing for some public sharing."
+        considerations: "This balanced approach maintains privacy while still allowing for some public sharing when appropriate. It requires thoughtful consideration of which content to make public versus private."
       }
     ]
   }

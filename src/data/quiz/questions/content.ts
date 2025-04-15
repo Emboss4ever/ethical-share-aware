@@ -12,8 +12,7 @@ export const contentQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "consequentialism", score: 20 }
         ],
-        considerations: "Sharing personal achievements can help maintain a strong online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a strong online presence and can be useful for building relationships with others."
+        considerations: "Sharing personal achievements helps build a strong professional presence and can inspire others. This approach can help maintain relationships and create networking opportunities, though balance is needed to avoid appearing boastful."
       },
       {
         id: "4b",
@@ -21,8 +20,7 @@ export const contentQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 30 }
         ],
-        considerations: "Educational/informative content can be useful for building a reputation as a knowledgeable and helpful individual.",
-        positiveAspect: "Educational/informative content can be useful for building a reputation as a knowledgeable and helpful individual."
+        considerations: "Sharing educational content contributes positively to the community while establishing expertise. This approach helps build a reputation as a knowledgeable and helpful individual, benefiting both you and your network."
       },
       {
         id: "4c",
@@ -31,8 +29,7 @@ export const contentQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -10 }
         ],
-        considerations: "Entertainment and humor can be useful for maintaining a positive online presence, but may not be appropriate for all situations.",
-        positiveAspect: "Entertainment and humor can be useful for maintaining a positive online presence, but may not be appropriate for all situations."
+        considerations: "Entertainment content can boost engagement and maintain an approachable online presence. While this can help build connections, it's important to ensure the content remains appropriate and doesn't undermine professional credibility."
       },
       {
         id: "4d",
@@ -41,8 +38,7 @@ export const contentQuestions: QuizQuestionSet = [
           { framework: "duty", score: 20 },
           { framework: "virtue", score: 10 }
         ],
-        considerations: "Social/political commentary can be useful for building a reputation as a thoughtful and engaged individual.",
-        positiveAspect: "Social/political commentary can be useful for building a reputation as a thoughtful and engaged individual."
+        considerations: "Engaging in social/political discourse shows civic engagement and critical thinking. This can establish you as a thought leader but requires careful consideration of potential controversy and professional impact."
       }
     ]
   }

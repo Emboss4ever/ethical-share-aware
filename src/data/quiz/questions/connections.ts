@@ -13,8 +13,7 @@ export const connectionQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -20 }
         ],
-        considerations: "Accepting everyone can lead to a large number of followers, which may not be appropriate for all situations.",
-        positiveAspect: "Maintains a large following and can be useful for reaching a broad audience."
+        considerations: "While accepting everyone can lead to a large network and broad audience reach, it may compromise privacy and security. This approach maximizes potential connections but increases exposure to unwanted content or interactions."
       },
       {
         id: "3b",
@@ -22,8 +21,7 @@ export const connectionQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Only accepting people you know in real life can limit your network and make it harder to connect with others.",
-        positiveAspect: "Maintains privacy and control over who can see your posts."
+        considerations: "This conservative approach maintains strong privacy and control over your network, though it may limit professional opportunities and broader connections. It ensures authentic relationships but could restrict growth of your network."
       },
       {
         id: "3c",
@@ -31,8 +29,7 @@ export const connectionQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 20 }
         ],
-        considerations: "Based on mutual connections and profile review can help maintain a balanced network of followers.",
-        positiveAspect: "Balances privacy and control over who can see your posts."
+        considerations: "This balanced approach helps maintain a quality network while allowing for growth. It combines safety with opportunity by leveraging trusted connections' networks."
       },
       {
         id: "3d",
@@ -41,8 +38,7 @@ export const connectionQuestions: QuizQuestionSet = [
           { framework: "duty", score: 20 },
           { framework: "virtue", score: 10 }
         ],
-        considerations: "A strict verification process can help maintain a balanced network of followers and ensure that only appropriate people are connected.",
-        positiveAspect: "Balances privacy and control over who can see your posts."
+        considerations: "A thorough verification process ensures high-quality connections while maintaining network security. This approach prioritizes safety and authenticity but requires more time and effort to manage."
       }
     ]
   }

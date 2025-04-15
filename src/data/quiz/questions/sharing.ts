@@ -13,8 +13,7 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "duty", score: 20 },
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "Sharing potentially controversial content with a disclaimer can help maintain a positive online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a positive online presence and can be useful for building relationships with others."
+        considerations: "Adding disclaimers shows responsibility while allowing important discussions. This balanced approach helps manage risk while enabling meaningful dialogue on significant issues."
       },
       {
         id: "5b",
@@ -23,8 +22,7 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
         ],
-        considerations: "Avoiding potentially controversial content can help maintain a positive online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a positive online presence and can be useful for building relationships with others."
+        considerations: "This cautious approach minimizes risk and maintains professional relationships. While it may limit engagement with important issues, it helps preserve reputation and avoid potential conflicts."
       },
       {
         id: "5c",
@@ -32,8 +30,7 @@ export const sharingQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "consequentialism", score: 20 }
         ],
-        considerations: "Sharing potentially controversial content only in private groups can help maintain a positive online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a positive online presence and can be useful for building relationships with others."
+        considerations: "Sharing in private groups allows for more nuanced discussion while limiting exposure. This approach balances engagement with controversial topics against broader reputational concerns."
       },
       {
         id: "5d",
@@ -41,8 +38,7 @@ export const sharingQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 30 }
         ],
-        considerations: "Evaluating each case individually can help maintain a positive online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a positive online presence and can be useful for building relationships with others."
+        considerations: "This thoughtful approach allows for nuanced decision-making based on context. It requires more effort but leads to more responsible content sharing."
       }
     ]
   },
@@ -56,8 +52,7 @@ export const sharingQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Always asking for permission first shows respect for others' privacy and autonomy, but might slow down sharing time-sensitive content.",
-        positiveAspect: "Demonstrates strong respect for consent and privacy rights."
+        considerations: "This approach demonstrates strong respect for privacy and consent. While it may delay sharing time-sensitive content, it ensures everyone's comfort and rights are protected."
       },
       {
         id: "8b",
@@ -66,8 +61,7 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "duty", score: -10 }
         ],
-        considerations: "While this approach is more efficient, it might violate someone's privacy rights before they can object.",
-        positiveAspect: "Allows for quick sharing while still respecting objections."
+        considerations: "This approach prioritizes quick sharing but risks violating privacy rights. While efficient, it may damage relationships if someone is uncomfortable with shared content."
       },
       {
         id: "8c",
@@ -76,8 +70,7 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
         ],
-        considerations: "This balanced approach protects privacy while allowing sharing, but might limit content reach.",
-        positiveAspect: "Balances privacy concerns with sharing needs."
+        considerations: "This balanced approach protects privacy while enabling sharing within trusted circles. It respects relationships while maintaining the ability to share memories with relevant groups."
       },
       {
         id: "8d",
@@ -86,54 +79,7 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 30 },
           { framework: "virtue", score: -20 }
         ],
-        considerations: "While this maximizes engagement, it might make some people uncomfortable or violate privacy preferences.",
-        positiveAspect: "Maximizes content visibility and engagement."
-      }
-    ]
-  },
-  {
-    id: 4,
-    question: "When sharing group photos from events:",
-    options: [
-      {
-        id: "4a",
-        text: "I post immediately to maintain relevance",
-        scoring: [
-          { framework: "consequentialism", score: 20 },
-          { framework: "virtue", score: -30 }
-        ],
-        considerations: "Quick posting maintains engagement but might not consider everyone's preferences or privacy.",
-        positiveAspect: "Maximizes timeliness and relevance of content."
-      },
-      {
-        id: "4b",
-        text: "I verify everyone's comfort with facial recognition",
-        scoring: [
-          { framework: "duty", score: 30 },
-          { framework: "virtue", score: 20 }
-        ],
-        considerations: "This approach prioritizes consent but might delay sharing time-sensitive content.",
-        positiveAspect: "Shows strong consideration for privacy and consent."
-      },
-      {
-        id: "4c",
-        text: "I blur or edit sensitive details",
-        scoring: [
-          { framework: "virtue", score: 20 },
-          { framework: "duty", score: 20 }
-        ],
-        considerations: "Balances privacy with sharing, but might reduce photo authenticity.",
-        positiveAspect: "Protects sensitive information while allowing content sharing."
-      },
-      {
-        id: "4d",
-        text: "I trust my social circle's privacy settings",
-        scoring: [
-          { framework: "consequentialism", score: -10 },
-          { framework: "duty", score: -20 }
-        ],
-        considerations: "This approach might expose content to unintended audiences due to complex privacy settings.",
-        positiveAspect: "Simplifies sharing process within trusted circles."
+        considerations: "While this maximizes engagement and visibility, it may violate privacy preferences. Consider that not everyone wants to be tagged or have their presence broadcast widely."
       }
     ]
   }

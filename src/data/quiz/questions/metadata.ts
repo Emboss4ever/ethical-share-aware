@@ -13,8 +13,7 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: -10 },
           { framework: "duty", score: -20 }
         ],
-        considerations: "Not reviewing privacy settings can expose personal information and lead to security vulnerabilities.",
-        positiveAspect: "Reduces time spent on platform management."
+        considerations: "While this approach saves time, it exposes you to significant privacy risks. Not reviewing settings can lead to unintended information exposure and security vulnerabilities."
       },
       {
         id: "6b",
@@ -22,8 +21,7 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 10 }
         ],
-        considerations: "Annual reviews might miss important privacy updates but provide basic protection.",
-        positiveAspect: "Maintains basic privacy awareness with minimal time investment."
+        considerations: "Annual reviews provide basic protection while requiring minimal time investment. This approach might miss important updates but maintains some level of privacy awareness."
       },
       {
         id: "6c",
@@ -31,8 +29,7 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Regular monthly reviews help maintain privacy but require time commitment.",
-        positiveAspect: "Ensures consistent privacy maintenance and awareness."
+        considerations: "Regular monthly reviews demonstrate strong privacy consciousness. This consistent approach helps maintain security while requiring a reasonable time commitment."
       },
       {
         id: "6d",
@@ -41,8 +38,7 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 20 }
         ],
-        considerations: "This approach ensures up-to-date privacy settings but requires vigilance.",
-        positiveAspect: "Stays current with platform changes and protects privacy proactively."
+        considerations: "This proactive approach ensures maximum privacy protection and awareness of platform changes. While requiring vigilance, it provides the most comprehensive privacy management."
       }
     ]
   },
@@ -57,8 +53,7 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -10 }
         ],
-        considerations: "Quick sharing maximizes engagement but might appear boastful or miss important context.",
-        positiveAspect: "Maximizes visibility and potential networking opportunities."
+        considerations: "Quick sharing maximizes visibility and potential networking opportunities. However, this approach might appear boastful or miss important context that could make the share more meaningful."
       },
       {
         id: "7b",
@@ -67,8 +62,7 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "duty", score: 20 },
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "This approach protects long-term interests but might miss immediate opportunities.",
-        positiveAspect: "Protects professional and personal reputation."
+        considerations: "This thoughtful approach protects long-term interests and professional reputation. While it might miss immediate opportunities, it ensures more strategic and considered sharing."
       },
       {
         id: "7c",
@@ -76,8 +70,7 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 30 }
         ],
-        considerations: "Focusing on benefiting others might limit personal networking opportunities.",
-        positiveAspect: "Contributes positively to community knowledge and inspiration."
+        considerations: "This altruistic approach contributes positively to community knowledge and inspiration. While it may limit personal networking opportunities, it maintains a focus on providing value to others."
       },
       {
         id: "7d",
@@ -85,8 +78,7 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Following established rules might miss unique opportunities or context.",
-        positiveAspect: "Maintains consistent and professional online presence."
+        considerations: "Following established guidelines maintains a consistent and professional online presence. While this approach might miss unique opportunities, it ensures appropriate and standardized sharing practices."
       }
     ]
   }
