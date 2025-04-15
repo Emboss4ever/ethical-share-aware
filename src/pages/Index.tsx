@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import QuizSection from "@/components/home/QuizSection";
 import AboutSection from "@/components/home/AboutSection";
+import FrameworksCallToAction from "@/components/home/FrameworksCallToAction";
 
 const Index = () => {
   // Smooth scroll to element when URL has hash
@@ -23,6 +24,7 @@ const Index = () => {
       <HeroSection />
       <QuizSection />
       <AboutSection />
+      <FrameworksCallToAction />
       <Footer />
     </div>
   );
