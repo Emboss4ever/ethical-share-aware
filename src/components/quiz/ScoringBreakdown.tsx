@@ -50,20 +50,15 @@ const ScoringBreakdown = ({
         </div>
       </div>
       
-      {(selectedOptionData.considerations || selectedOptionData.positiveAspect) && (
+      {selectedOptionData.considerations && (
         <div className="mt-4 space-y-3 text-sm border-t pt-3">
-          {selectedOptionData.considerations && (
-            <div>
-              <h4 className="font-medium text-gray-900 mb-1">Considerations:</h4>
-              <p className="text-gray-600">{selectedOptionData.considerations}</p>
-            </div>
-          )}
-          {selectedOptionData.positiveAspect && (
-            <div>
-              <h4 className="font-medium text-gray-900 mb-1">Positive Aspect:</h4>
-              <p className="text-green-600">{selectedOptionData.positiveAspect}</p>
-            </div>
-          )}
+          <div>
+            <h4 className="font-medium text-gray-900 mb-1">Considerations:</h4>
+            <p 
+              className="text-gray-600"
+              dangerouslySetInnerHTML={{ __html: selectedOptionData.considerations }}
+            />
+          </div>
         </div>
       )}
     </div>

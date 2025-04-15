@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import GeneralEthics from "./pages/GeneralEthics";
 import Frameworks from "./pages/Frameworks";
 import NotFound from "./pages/NotFound";
+import Risks from "./pages/Risks";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/general-ethics" element={<GeneralEthics />} />
           <Route path="/frameworks" element={<Frameworks />} />
+          <Route path="/risks" element={<Risks />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
