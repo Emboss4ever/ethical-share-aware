@@ -1,3 +1,4 @@
+
 import { QuizQuestionSet } from "@/types/ethics";
 
 export const metadataQuestions: QuizQuestionSet = [
@@ -12,8 +13,8 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: -10 },
           { framework: "duty", score: -20 }
         ],
-        considerations: "Never reviewing your privacy settings can lead to security vulnerabilities and can be difficult to maintain a balanced online presence.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Not reviewing privacy settings can expose personal information and lead to security vulnerabilities.",
+        positiveAspect: "Reduces time spent on platform management."
       },
       {
         id: "6b",
@@ -21,8 +22,8 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 10 }
         ],
-        considerations: "Annually reviewing your privacy settings can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Annual reviews might miss important privacy updates but provide basic protection.",
+        positiveAspect: "Maintains basic privacy awareness with minimal time investment."
       },
       {
         id: "6c",
@@ -30,8 +31,8 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Monthly reviewing your privacy settings can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Regular monthly reviews help maintain privacy but require time commitment.",
+        positiveAspect: "Ensures consistent privacy maintenance and awareness."
       },
       {
         id: "6d",
@@ -40,8 +41,8 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 20 }
         ],
-        considerations: "After every platform update reviewing your privacy settings can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "This approach ensures up-to-date privacy settings but requires vigilance.",
+        positiveAspect: "Stays current with platform changes and protects privacy proactively."
       }
     ]
   },
@@ -56,8 +57,8 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -10 }
         ],
-        considerations: "Sharing personal achievements immediately can help maximize engagement, but may not be appropriate for all situations.",
-        positiveAspect: "Helps maximize engagement and can be useful for building relationships with others."
+        considerations: "Quick sharing maximizes engagement but might appear boastful or miss important context.",
+        positiveAspect: "Maximizes visibility and potential networking opportunities."
       },
       {
         id: "7b",
@@ -66,8 +67,8 @@ export const metadataQuestions: QuizQuestionSet = [
           { framework: "duty", score: 20 },
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "Carefully considering potential future implications can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "This approach protects long-term interests but might miss immediate opportunities.",
+        positiveAspect: "Protects professional and personal reputation."
       },
       {
         id: "7c",
@@ -75,8 +76,8 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 30 }
         ],
-        considerations: "Only sharing personal achievements if it might benefit others can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Focusing on benefiting others might limit personal networking opportunities.",
+        positiveAspect: "Contributes positively to community knowledge and inspiration."
       },
       {
         id: "7d",
@@ -84,145 +85,8 @@ export const metadataQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Sharing personal achievements based on established rules can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      }
-    ]
-  },
-  {
-    id: 8,
-    question: "How do you approach sharing photos that include others?",
-    options: [
-      {
-        id: "8a",
-        text: "Always ask for permission first",
-        scoring: [
-          { framework: "duty", score: 30 }
-        ],
-        considerations: "Always asking for permission first can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "8b",
-        text: "Share and remove if someone objects",
-        scoring: [
-          { framework: "consequentialism", score: 20 },
-          { framework: "duty", score: -10 }
-        ],
-        considerations: "Sharing and removing if someone objects can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "8c",
-        text: "Only share in private groups based on moral principles",
-        scoring: [
-          { framework: "virtue", score: 20 },
-          { framework: "duty", score: 10 }
-        ],
-        considerations: "Only sharing in private groups based on moral principles can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "8d",
-        text: "Tag everyone to maximize utility",
-        scoring: [
-          { framework: "consequentialism", score: 30 },
-          { framework: "virtue", score: -20 }
-        ],
-        considerations: "Tagging everyone to maximize utility can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      }
-    ]
-  },
-  {
-    id: 4,
-    question: "When sharing group photos from events:",
-    options: [
-      {
-        id: "4a",
-        text: "I post immediately to maintain relevance",
-        scoring: [
-          { framework: "consequentialism", score: 20 },
-          { framework: "virtue", score: -30 }
-        ],
-        considerations: "Posting immediately to maintain relevance can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "4b",
-        text: "I verify everyone's comfort with facial recognition",
-        scoring: [
-          { framework: "duty", score: 30 },
-          { framework: "virtue", score: 20 }
-        ],
-        considerations: "Verifying everyone's comfort with facial recognition can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "4c",
-        text: "I blur or edit sensitive details",
-        scoring: [
-          { framework: "virtue", score: 20 },
-          { framework: "duty", score: 20 }
-        ],
-        considerations: "Blurring or editing sensitive details can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "4d",
-        text: "I trust my social circle's privacy settings",
-        scoring: [
-          { framework: "consequentialism", score: -10 },
-          { framework: "duty", score: -20 }
-        ],
-        considerations: "Trusting your social circle's privacy settings can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      }
-    ]
-  },
-  {
-    id: 5,
-    question: "Regarding my personal information visible online:",
-    options: [
-      {
-        id: "5a",
-        text: "I regularly search and audit my digital presence",
-        scoring: [
-          { framework: "duty", score: 30 },
-          { framework: "virtue", score: 20 }
-        ],
-        considerations: "Regularly searching and auditing your digital presence can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "5b",
-        text: "I only worry when something happens",
-        scoring: [
-          { framework: "consequentialism", score: -20 },
-          { framework: "virtue", score: -10 }
-        ],
-        considerations: "Only worrying when something happens can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "5c",
-        text: "I maintain multiple separate online identities",
-        scoring: [
-          { framework: "virtue", score: 20 },
-          { framework: "duty", score: 10 }
-        ],
-        considerations: "Maintaining multiple separate online identities can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
-      },
-      {
-        id: "5d",
-        text: "I share everything openly for transparency",
-        scoring: [
-          { framework: "consequentialism", score: -30 },
-          { framework: "duty", score: -20 }
-        ],
-        considerations: "Sharing everything openly for transparency can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Following established rules might miss unique opportunities or context.",
+        positiveAspect: "Maintains consistent and professional online presence."
       }
     ]
   }

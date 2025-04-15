@@ -1,3 +1,4 @@
+
 import { QuizQuestionSet } from "@/types/ethics";
 
 export const sharingQuestions: QuizQuestionSet = [
@@ -55,8 +56,8 @@ export const sharingQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 30 }
         ],
-        considerations: "Always asking for permission first can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Always asking for permission first shows respect for others' privacy and autonomy, but might slow down sharing time-sensitive content.",
+        positiveAspect: "Demonstrates strong respect for consent and privacy rights."
       },
       {
         id: "8b",
@@ -65,8 +66,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "duty", score: -10 }
         ],
-        considerations: "Sharing and removing if someone objects can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "While this approach is more efficient, it might violate someone's privacy rights before they can object.",
+        positiveAspect: "Allows for quick sharing while still respecting objections."
       },
       {
         id: "8c",
@@ -75,8 +76,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
         ],
-        considerations: "Only sharing in private groups based on moral principles can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "This balanced approach protects privacy while allowing sharing, but might limit content reach.",
+        positiveAspect: "Balances privacy concerns with sharing needs."
       },
       {
         id: "8d",
@@ -85,8 +86,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 30 },
           { framework: "virtue", score: -20 }
         ],
-        considerations: "Tagging everyone to maximize utility can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "While this maximizes engagement, it might make some people uncomfortable or violate privacy preferences.",
+        positiveAspect: "Maximizes content visibility and engagement."
       }
     ]
   },
@@ -101,8 +102,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -30 }
         ],
-        considerations: "Posting immediately to maintain relevance can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Quick posting maintains engagement but might not consider everyone's preferences or privacy.",
+        positiveAspect: "Maximizes timeliness and relevance of content."
       },
       {
         id: "4b",
@@ -111,8 +112,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "duty", score: 30 },
           { framework: "virtue", score: 20 }
         ],
-        considerations: "Verifying everyone's comfort with facial recognition can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "This approach prioritizes consent but might delay sharing time-sensitive content.",
+        positiveAspect: "Shows strong consideration for privacy and consent."
       },
       {
         id: "4c",
@@ -121,8 +122,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 20 }
         ],
-        considerations: "Blurring or editing sensitive details can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "Balances privacy with sharing, but might reduce photo authenticity.",
+        positiveAspect: "Protects sensitive information while allowing content sharing."
       },
       {
         id: "4d",
@@ -131,8 +132,8 @@ export const sharingQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: -10 },
           { framework: "duty", score: -20 }
         ],
-        considerations: "Trusting your social circle's privacy settings can help maintain a balanced online presence and can be useful for building relationships with others.",
-        positiveAspect: "Helps maintain a balanced online presence and can be useful for building relationships with others."
+        considerations: "This approach might expose content to unintended audiences due to complex privacy settings.",
+        positiveAspect: "Simplifies sharing process within trusted circles."
       }
     ]
   }
