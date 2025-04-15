@@ -1,4 +1,3 @@
-
 export interface QuizQuestion {
   id: number;
   question: string;
@@ -189,6 +188,196 @@ export const quizQuestions: QuizQuestion[] = [
         text: "Evaluate each case individually",
         scoring: [
           { framework: "virtue", score: 30 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 6,
+    question: "Which principle do you value most when making decisions about sharing content?",
+    options: [
+      {
+        id: "6a",
+        text: "Following clear moral rules and principles",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "6b",
+        text: "Maximizing positive outcomes for everyone involved",
+        scoring: [
+          { framework: "consequentialism", score: 30 },
+          { framework: "duty", score: -10 }
+        ]
+      },
+      {
+        id: "6c",
+        text: "Acting with wisdom and good character",
+        scoring: [
+          { framework: "virtue", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "6d",
+        text: "Balance between rules and outcomes",
+        scoring: [
+          { framework: "duty", score: 15 },
+          { framework: "consequentialism", score: 15 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 7,
+    question: "When faced with an ethical dilemma online, what guides your decision-making?",
+    options: [
+      {
+        id: "7a",
+        text: "Universal principles that should apply to everyone",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "virtue", score: -10 }
+        ]
+      },
+      {
+        id: "7b",
+        text: "The potential impact on all stakeholders",
+        scoring: [
+          { framework: "consequentialism", score: 30 },
+          { framework: "duty", score: -10 }
+        ]
+      },
+      {
+        id: "7c",
+        text: "What a person of good character would do",
+        scoring: [
+          { framework: "virtue", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "7d",
+        text: "Platform guidelines and community standards",
+        scoring: [
+          { framework: "duty", score: 20 },
+          { framework: "virtue", score: 10 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 8,
+    question: "What matters most to you when sharing personal information online?",
+    options: [
+      {
+        id: "8a",
+        text: "Following strict privacy principles regardless of circumstances",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "8b",
+        text: "The potential benefits vs risks for everyone involved",
+        scoring: [
+          { framework: "consequentialism", score: 30 },
+          { framework: "duty", score: -10 }
+        ]
+      },
+      {
+        id: "8c",
+        text: "Being authentic and maintaining integrity",
+        scoring: [
+          { framework: "virtue", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "8d",
+        text: "What feels right based on personal values",
+        scoring: [
+          { framework: "virtue", score: 20 },
+          { framework: "duty", score: 10 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 9,
+    question: "How do you approach digital conflict resolution?",
+    options: [
+      {
+        id: "9a",
+        text: "Follow established community guidelines strictly",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "virtue", score: -10 }
+        ]
+      },
+      {
+        id: "9b",
+        text: "Find solutions that benefit the most people",
+        scoring: [
+          { framework: "consequentialism", score: 30 },
+          { framework: "duty", score: -10 }
+        ]
+      },
+      {
+        id: "9c",
+        text: "Act with wisdom and compassion",
+        scoring: [
+          { framework: "virtue", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "9d",
+        text: "Mediate based on fairness principles",
+        scoring: [
+          { framework: "duty", score: 15 },
+          { framework: "virtue", score: 15 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 10,
+    question: "What best describes your view on digital ethics?",
+    options: [
+      {
+        id: "10a",
+        text: "There are universal rules we should all follow online",
+        scoring: [
+          { framework: "duty", score: 30 },
+          { framework: "consequentialism", score: -10 }
+        ]
+      },
+      {
+        id: "10b",
+        text: "The right action is what creates the most good for the most people",
+        scoring: [
+          { framework: "consequentialism", score: 30 },
+          { framework: "virtue", score: -10 }
+        ]
+      },
+      {
+        id: "10c",
+        text: "Being a good digital citizen is about developing character",
+        scoring: [
+          { framework: "virtue", score: 30 },
+          { framework: "duty", score: -10 }
+        ]
+      },
+      {
+        id: "10d",
+        text: "Balance between rules and personal judgment",
+        scoring: [
+          { framework: "duty", score: 15 },
+          { framework: "virtue", score: 15 }
         ]
       }
     ]
