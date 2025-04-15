@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ethicalFrameworks, quizScoring } from "@/data/frameworks";
 import { ArrowRight } from "lucide-react";
@@ -58,11 +57,10 @@ const QuizResults = ({ results, selectedOptions, onReset }: QuizResultsProps) =>
       <div className="mt-8">
         <h4 className="text-lg font-medium mb-4">Your Answers Analysis</h4>
         <div className="space-y-4">
-          {quizScoring.map((scoring, index) => (
+          {quizScoring.map((_, index) => (
             <ScoringBreakdown
               key={index}
               index={index}
-              scoring={scoring}
               selectedOption={selectedOptions[index]}
             />
           ))}

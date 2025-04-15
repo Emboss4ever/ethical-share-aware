@@ -1,14 +1,5 @@
-
 import { ethicalFrameworks } from "@/data/frameworks";
 import { quizQuestions } from "@/data/quizQuestions";
-import { Button } from "@/components/ui/button";
-import { Info } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 interface ScoringBreakdownProps {
   index: number;
