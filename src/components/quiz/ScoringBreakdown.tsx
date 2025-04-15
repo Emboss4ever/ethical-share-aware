@@ -72,8 +72,8 @@ const ScoringBreakdown = ({
         <div className="mt-4 space-y-3 text-sm border-t pt-3">
           <div>
             <h4 className="font-medium text-gray-900 mb-1">Considerations:</h4>
-            <p 
-              className="text-gray-600"
+            <div 
+              className="text-gray-600 [&_a]:text-purple-600 [&_a]:underline [&_a]:hover:text-purple-800"
               dangerouslySetInnerHTML={{ __html: selectedOptionData.considerations }}
             />
           </div>

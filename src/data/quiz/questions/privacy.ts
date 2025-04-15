@@ -13,7 +13,7 @@ export const privacyQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 30 },
           { framework: "duty", score: -10 }
         ],
-        considerations: "Public posts allow for easy sharing of content and can be useful for reaching a broad audience. However, this can expose personal information to a wider audience, which may not be appropriate for all situations."
+        considerations: "Public posts maximize your exposure to <a href='/risks/osint'>OSINT collection</a> and significantly increase risk of <a href='/risks/data-theft'>data harvesting</a>. This setting also provides extensive training data for <a href='/risks/deepfakes'>deepfake creation</a> if you share photos or videos."
       },
       {
         id: "2b",
@@ -21,7 +21,7 @@ export const privacyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 20 }
         ],
-        considerations: "Friends-only posts provide a more controlled environment for sharing content while maintaining privacy and control over who can see your posts. However, this may limit visibility and potential connections."
+        considerations: "While more secure than public settings, friends-only still poses risks of <a href='/risks/data-theft'>data theft</a> through compromised friend accounts or <a href='/risks/identity-theft'>identity theft</a> from trusted connections being exploited."
       },
       {
         id: "2c",
@@ -30,7 +30,7 @@ export const privacyQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 20 },
           { framework: "duty", score: 10 }
         ],
-        considerations: "Custom lists allow for more targeted sharing of content while balancing privacy and control. This approach requires careful consideration of audience segmentation but provides optimal content control."
+        considerations: "This granular approach helps mitigate <a href='/risks/osint'>OSINT threats</a> by controlling information flow. However, complex privacy settings need regular auditing to prevent accidental exposure that could lead to <a href='/risks/data-theft'>data theft</a>."
       },
       {
         id: "2d",
@@ -39,7 +39,7 @@ export const privacyQuestions: QuizQuestionSet = [
           { framework: "virtue", score: 10 },
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "This balanced approach maintains privacy while still allowing for some public sharing when appropriate. It requires thoughtful consideration of which content to make public versus private."
+        considerations: "This hybrid approach reduces overall <a href='/risks/osint'>OSINT vulnerability</a>, but requires careful consideration of which content goes public. Each public post should be evaluated for potential <a href='/risks/deepfakes'>deepfake exploitation</a> or <a href='/risks/identity-theft'>identity theft risks</a>."
       }
     ]
   }

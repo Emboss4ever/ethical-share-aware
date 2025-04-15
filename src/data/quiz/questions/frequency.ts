@@ -13,7 +13,7 @@ export const frequencyQuestions: QuizQuestionSet = [
           { framework: "consequentialism", score: 20 },
           { framework: "virtue", score: -10 }
         ],
-        considerations: "Frequent posting helps maintain strong social connections but significantly increases your digital footprint. This frequency makes you more vulnerable to <a href='/risks#osint'>OSINT attacks</a> through pattern analysis and can provide substantial data for potential <a href='/risks#identity-theft'>identity theft</a>."
+        considerations: "Frequent posting significantly increases your vulnerability to <a href='/risks/osint'>OSINT collection</a> by providing abundant data points for pattern analysis. This behavior also heightens risk of <a href='/risks/identity-theft'>identity theft</a> through timeline analysis and personal detail accumulation. Additionally, frequent updates provide more training data for <a href='/risks/deepfakes'>deepfake generation</a>."
       },
       {
         id: "1b",
@@ -21,7 +21,7 @@ export const frequencyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "consequentialism", score: 10 }
         ],
-        considerations: "Daily updates provide consistent engagement while requiring careful content curation. Consider that regular posting still creates a significant dataset for <a href='/risks#data-theft'>data collection and analysis</a>."
+        considerations: "Daily updates still create a significant dataset for <a href='/risks/data-theft'>unauthorized data collection</a>. While less frequent than multiple daily posts, this pattern still enables <a href='/risks/osint'>OSINT analysts</a> to build reliable behavioral profiles and identify patterns in your daily routine."
       },
       {
         id: "1c",
@@ -29,7 +29,7 @@ export const frequencyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "duty", score: 10 }
         ],
-        considerations: "This moderate frequency allows for more thoughtful content sharing while reducing your vulnerability to <a href='/risks#osint'>OSINT collection</a> and automated data harvesting."
+        considerations: "This moderate frequency reduces your vulnerability to <a href='/risks/osint'>OSINT collection</a> and automated <a href='/risks/data-theft'>data harvesting</a>. The reduced frequency makes it harder for malicious actors to build accurate patterns of your behavior or daily routines."
       },
       {
         id: "1d",
@@ -37,7 +37,7 @@ export const frequencyQuestions: QuizQuestionSet = [
         scoring: [
           { framework: "virtue", score: 20 }
         ],
-        considerations: "This approach minimizes your digital footprint and reduces exposure to <a href='/risks#data-theft'>privacy breaches</a>, though important events might still need careful consideration regarding personal information disclosure."
+        considerations: "This minimal approach significantly reduces risks of <a href='/risks/data-theft'>privacy breaches</a> and <a href='/risks/osint'>OSINT exploitation</a>. However, when sharing significant events, extra caution is needed as these posts often contain more sensitive personal information that could be valuable for <a href='/risks/identity-theft'>identity theft</a>."
       }
     ]
   }
