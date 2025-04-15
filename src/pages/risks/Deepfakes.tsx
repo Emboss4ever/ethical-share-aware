@@ -2,17 +2,27 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 const DeepfakeRisks = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleGoBack = () => {
+    const state = location.state as { fromQuizResults?: boolean };
+    if (state?.fromQuizResults) {
+      navigate('/quiz-results');
+    } else {
+      navigate(-1);
+    }
+  };
 
   return (
     <div className="container mx-auto py-8 px-4">
       <Button 
         variant="ghost" 
-        onClick={() => navigate(-1)} 
+        onClick={handleGoBack} 
         className="mb-6"
       >
         <ArrowLeft className="mr-2 h-4 w-4" />

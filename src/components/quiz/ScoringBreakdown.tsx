@@ -1,6 +1,6 @@
-
-import { ethicalFrameworks } from "@/data/frameworks";
-import { socialMediaQuiz, generalEthicsQuiz } from "@/data/quizQuestions";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { risksConfig } from '@/data/risksConfig';
 
 interface ScoringBreakdownProps {
   index: number;
@@ -23,6 +23,21 @@ const ScoringBreakdown = ({
   );
 
   if (!selectedOptionData) return null;
+
+  const renderRiskLink = (riskPath: string) => {
+    const riskConfig = risksConfig[riskPath];
+    if (!riskConfig) return null;
+
+    return (
+      <Link 
+        to={`/risks/${riskPath}`} 
+        state={{ fromQuizResults: true }}
+        className="text-purple-600 underline hover:text-purple-800"
+      >
+        Learn more about {riskConfig.title}
+      </Link>
+    );
+  };
 
   return (
     <div className="p-4 border rounded-lg space-y-4">
