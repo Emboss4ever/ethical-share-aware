@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="text-xl font-bold text-purple-600">
-            EthicalShare
+            Think Before You Click
           </Link>
         </div>
 

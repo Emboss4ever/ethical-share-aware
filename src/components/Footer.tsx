@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold text-purple-600 mb-4">EthicalShare</h3>
+            <h3 className="text-lg font-semibold text-purple-600 mb-4">Think Before You Click</h3>
             <p className="text-gray-600 text-sm">
               Helping young adults navigate social media sharing with ethical awareness.
             </p>
@@ -43,7 +42,7 @@ const Footer = () => {
               practices through various ethical lenses.
             </p>
             <p className="text-gray-500 text-xs">
-              © {currentYear} EthicalShare. All rights reserved.
+              © {currentYear} Think Before You Click. All rights reserved.
             </p>
           </div>
         </div>

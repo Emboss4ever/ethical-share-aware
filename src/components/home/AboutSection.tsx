@@ -5,7 +5,7 @@ const AboutSection = () => {
     <section id="about" className="py-16 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="text-center mb-10 animate-fade-in">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">About This Tool</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">About Think Before You Click</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Learn more about why ethical social media sharing matters and how this tool can help.
           </p>
