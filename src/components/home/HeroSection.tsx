@@ -13,10 +13,10 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
-              Think <span className="text-purple-600">Before You Click</span>
+              "To share, or not to share: <span className="text-purple-600">that is the question!</span>"
             </h1>
             <p className="text-lg text-gray-700 mb-4 max-w-xl italic">
-              "To share, or not to share: that is the question!" - William Shakespear (well, kinda)
+              - William Shakespeare (well, kinda)
             </p>
             <p className="text-lg text-gray-700 mb-8 max-w-xl">
               Evaluate your social media sharing practices through ethical frameworks designed for today's digital world.
