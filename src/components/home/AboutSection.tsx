@@ -1,3 +1,4 @@
+import { Code2, Heart, User } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -88,6 +89,44 @@ const AboutSection = () => {
                 <h4 className="font-medium text-gray-900">Respect Privacy</h4>
                 <p className="text-gray-600 text-sm">
                   Use privacy settings intentionally and respect others' privacy boundaries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">About the Developer</h2>
+            <div className="flex justify-center mb-6">
+              <User className="h-16 w-16 text-purple-600" />
+            </div>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+              Hi! I'm Sarah, a computer science student passionate about the intersection of technology and ethics. 
+              I created EthicalShare to help young adults navigate the complex world of social media sharing with 
+              greater awareness and responsibility.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <Code2 className="h-5 w-5 text-purple-600 mr-2" />
+                  <h3 className="font-semibold text-gray-900">Background</h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  With a background in both software development and digital ethics, 
+                  I've combined these interests to create tools that make ethical 
+                  decision-making more accessible and engaging for digital natives.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <Heart className="h-5 w-5 text-purple-600 mr-2" />
+                  <h3 className="font-semibold text-gray-900">Mission</h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  My mission is to bridge the gap between technical knowledge and ethical 
+                  awareness, helping users make more informed decisions about their 
+                  digital footprint and online sharing practices.
                 </p>
               </div>
             </div>
