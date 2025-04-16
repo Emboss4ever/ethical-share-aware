@@ -38,35 +38,11 @@ const AboutSection = () => {
               <User className="h-6 w-6 text-purple-600 mr-2" />
               <h3 className="text-xl font-semibold">About the Developer</h3>
             </div>
-            <p className="text-gray-600 mb-3">
+            <p className="text-gray-600">
               Hi! I'm Sarah, a computer science student passionate about the intersection of technology and ethics. 
               I created EthicalShare to help young adults navigate the complex world of social media sharing with 
               greater awareness and responsibility.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-start">
-                <Code2 className="h-5 w-5 text-purple-600 mr-2 mt-1" />
-                <div>
-                  <h4 className="font-medium text-gray-900">Background</h4>
-                  <p className="text-gray-600 text-sm">
-                    With a background in both software development and digital ethics, 
-                    I've combined these interests to create tools that make ethical 
-                    decision-making more accessible and engaging for digital natives.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Heart className="h-5 w-5 text-purple-600 mr-2 mt-1" />
-                <div>
-                  <h4 className="font-medium text-gray-900">Mission</h4>
-                  <p className="text-gray-600 text-sm">
-                    My mission is to bridge the gap between technical knowledge and ethical 
-                    awareness, helping users make more informed decisions about their 
-                    digital footprint and online sharing practices.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         
