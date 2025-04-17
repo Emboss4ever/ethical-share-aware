@@ -74,16 +74,19 @@ const GeneralEthicsQuiz = ({ onClose }: GeneralEthicsQuizProps) => {
         });
       }
     });
-
-    const maxPossibleScorePerFramework = 100;
     
     const resultsArray: ResultScore[] = Object.entries(frameworkScores)
-      .map(([frameworkId, score]) => ({
-        frameworkId,
-        score,
-        percentage: Math.max(0, Math.min(100, (score / maxPossibleScorePerFramework) * 100))
-      }))
-      .sort((a, b) => b.percentage - a.percentage);
+      .map(([frameworkId, score]) => {
+        // Use raw points as percentage (100 points = 100%)
+        const percentage = Math.max(0, Math.min(100, score));
+        
+        return {
+          frameworkId,
+          score,
+          percentage
+        };
+      })
+      .sort((a, b) => b.score - a.score);
 
     setResults(resultsArray);
   };
