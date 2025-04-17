@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -38,13 +39,15 @@ const HeroSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">Digital Ethics Matter</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Digital Ethics & Online Vulnerability</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Your online actions have real impact. What you share reflects your values and affects others in ways you might not expect.
+                Every post, comment, and share online can expose you to hidden risks. Understanding how your digital actions can be exploited by emerging threats—such as identity theft, OSINT, and deepfake manipulation—is essential.
               </p>
               <ul className="space-y-2 text-gray-600">
-                {["Privacy & consent", "Information accuracy", "Impact awareness", "Digital citizenship"].map((item, i) => (
+                {["Privacy & Consent: Recognize how sharing personal data online can expose you and others to harm", 
+                   "Information Accuracy: Learn to discern truth from manipulation in an environment filled with sophisticated misinformation", 
+                   "Impact Awareness: Be aware that your digital footprint can be leveraged against you or those around you in unexpected ways"].map((item, i) => (
                   <li key={i} className="flex items-center">
                     <svg className="h-5 w-5 text-purple-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
