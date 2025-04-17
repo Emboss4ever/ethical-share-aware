@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Code2, Heart, User } from "lucide-react";
@@ -21,7 +20,7 @@ const About = () => {
               <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
                 <h3 className="text-xl font-semibold mb-3">Purpose</h3>
                 <p className="text-gray-600">
-                  This tool was designed to help young adults (16-25) develop a more intentional and ethical approach to what they share online, aimed at educating social media users to be critical in their behaviours and aware of emergent technologies that can be used to exploit social media users.
+                  The goal is to help social media users pause, reflect, and make more intentional choices about what they share and how they engage online. Because in the digital age, what you share says more than you think — and the consequences can reach further than you realize.
                 </p>
               </div>
               
