@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -74,28 +75,28 @@ const IdentityTheftRisks = () => {
         <CardContent className="space-y-4">
           <div className="space-y-4">
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">The Evolution of Identity Theft: Trends, Patterns, and Prevention Strategies</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Criminal Justice (2021)</p>
-              <p className="mt-2 text-sm">This research examines the changing landscape of identity theft in the digital age and evaluates the effectiveness of various prevention approaches.</p>
-              <a href="https://doi.org/10.1016/j.jcrimjus.2021.101815" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">Social Media Security: Identity Theft Prevention</h4>
+              <p className="text-sm text-gray-500 mt-1">International Journal of Innovative Science and Research Technology (2020)</p>
+              <p className="mt-2 text-sm">This research investigates the relationship between social media usage and identity theft, offering preventative strategies for users to protect their digital identities.</p>
+              <a href="https://d1wqtxts1xzle7.cloudfront.net/93994309/ijisrt20aug762-libre.pdf" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
 
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Social Media and Identity Theft: A Systematic Review</h4>
-              <p className="text-sm text-gray-500 mt-1">Computers & Security (2022)</p>
-              <p className="mt-2 text-sm">A comprehensive review of how social media platforms contribute to identity theft vulnerability and analysis of mitigation strategies.</p>
-              <a href="https://doi.org/10.1016/j.cose.2022.102598" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">The Identity Theft Threat of Social Media Information Disclosure</h4>
+              <p className="text-sm text-gray-500 mt-1">Computers & Security (2016)</p>
+              <p className="mt-2 text-sm">An examination of how personal information shared on social media platforms increases vulnerability to identity theft and provides risk mitigation recommendations.</p>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0167404816301559" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
 
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Psychological Impact of Identity Theft Victimization</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Traumatic Stress (2020)</p>
-              <p className="mt-2 text-sm">Explores the mental health consequences of identity theft and digital impersonation on victims.</p>
-              <a href="https://doi.org/10.1002/jts.22578" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">Social Engineering and Identity Theft Through Social Media</h4>
+              <p className="text-sm text-gray-500 mt-1">Advanced Sciences and Technologies for Security Applications (2019)</p>
+              <p className="mt-2 text-sm">This chapter explores how social media facilitates social engineering attacks leading to identity theft and offers countermeasures against such threats.</p>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-030-13283-5_6" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
