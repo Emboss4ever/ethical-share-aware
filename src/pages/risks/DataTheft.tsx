@@ -70,28 +70,19 @@ const DataTheftRisks = () => {
         <CardContent className="space-y-4">
           <div className="space-y-4">
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Data Breaches and Privacy Protection: Consumer Risk Perceptions and Behaviors</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Consumer Affairs (2021)</p>
-              <p className="mt-2 text-sm">This research examines how data breaches affect consumer perceptions and behaviors related to personal information sharing and privacy.</p>
-              <a href="https://doi.org/10.1111/joca.12340" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">Identity Theft and Data Breaches: How Stolen Data Circulates on the Dark Web</h4>
+              <p className="text-sm text-gray-500 mt-1">SES Journal (2022)</p>
+              <p className="mt-2 text-sm">This study examines the lifecycle of stolen data, tracing how personal information is acquired, sold, and utilized on dark web marketplaces following data breaches.</p>
+              <a href="https://www.sesjournal.com/index.php/1/article/view/188" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
 
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Dark Patterns and Data Extraction: Ethical Considerations in Web Design</h4>
-              <p className="text-sm text-gray-500 mt-1">Ethics and Information Technology (2022)</p>
-              <p className="mt-2 text-sm">Explores how user interface design can be weaponized to extract excessive personal data from users without meaningful consent.</p>
-              <a href="https://doi.org/10.1007/s10676-022-09623-4" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
-                Read Publication <ExternalLink className="ml-1 h-3 w-3" />
-              </a>
-            </div>
-
-            <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">The Economics of Data Theft: Understanding Markets for Stolen Information</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Cybersecurity (2020)</p>
-              <p className="mt-2 text-sm">Analysis of darkweb marketplaces where stolen personal data is bought and sold, examining pricing models and valuation of different types of personal information.</p>
-              <a href="https://doi.org/10.1093/cybsec/tyaa001" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">An Empirical Investigation of the Effects of Individuality on Responses to Data Theft Crimes</h4>
+              <p className="text-sm text-gray-500 mt-1">IEEE Transactions on Technology and Society (2020)</p>
+              <p className="mt-2 text-sm">Research analyzing how individual differences affect people's responses to data theft incidents, with implications for designing more effective protection measures and educational campaigns.</p>
+              <a href="https://ieeexplore.ieee.org/abstract/document/9024216" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
