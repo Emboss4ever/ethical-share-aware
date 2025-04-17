@@ -7,9 +7,7 @@ import { contentQuestions } from "./content";
 import { sharingQuestions } from "./sharing";
 import { metadataQuestions } from "./metadata";
 import { metadataAwarenessQuestions } from "./metadata-awareness";
-import { securityAwarenessQuestions } from "./security-awareness";
-import { visualPrivacyQuestions } from "./visual-privacy";
-import { digitalFootprintQuestions } from "./digital-footprint";
+// Removed: securityAwarenessQuestions, visualPrivacyQuestions, digitalFootprintQuestions
 
 export const socialMediaQuestions: QuizQuestionSet = [
   ...frequencyQuestions,
@@ -19,7 +17,4 @@ export const socialMediaQuestions: QuizQuestionSet = [
   ...sharingQuestions,
   ...metadataQuestions,
   ...metadataAwarenessQuestions,
-  ...securityAwarenessQuestions,
-  ...visualPrivacyQuestions,
-  ...digitalFootprintQuestions
 ];
