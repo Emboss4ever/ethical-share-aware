@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Home } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const DeepfakeRisks = () => {
   const navigate = useNavigate();
@@ -127,6 +129,24 @@ const DeepfakeRisks = () => {
             <a href="https://www.washingtonpost.com/technology/2023/03/21/ai-voice-deepfake-scam/" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
               Read Article <ExternalLink className="ml-1 h-3 w-3" />
             </a>
+          </div>
+
+          <Separator />
+          
+          <div>
+            <h4 className="font-semibold text-gray-900">Deepfake Risks When Sharing Children on Social Media</h4>
+            <p className="mt-2">This video explores the potential dangers of sharing your children's photos and videos on social media platforms, and how this content can be misused through deepfake technology.</p>
+            <div className="mt-4 border rounded-lg overflow-hidden">
+              <AspectRatio ratio={16 / 9}>
+                <iframe 
+                  src="https://www.youtube.com/embed/-r_2a064dWY" 
+                  title="Deepfake Risks When Sharing Children on Social Media"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </AspectRatio>
+            </div>
           </div>
         </CardContent>
       </Card>
