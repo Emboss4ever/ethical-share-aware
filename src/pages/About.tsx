@@ -1,3 +1,5 @@
+
+import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Code2, Heart, User } from "lucide-react";
@@ -50,67 +52,6 @@ const About = () => {
                 <p className="text-gray-600">
                   Hi! I'm Emma-Rose Blacher, a second year Computational Social Science student at The University of Amsterdam and this tool is part of my Change Making Expertise assignment.
                 </p>
-              </div>
-            </div>
-            
-            <div className="mt-16 bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto animate-fade-in">
-              <h3 className="text-2xl font-semibold mb-4 text-center">Tips for Ethical Sharing</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="h-6 w-6 rounded-full bg-purple-100 flex items-center justify-center">
-                      <span className="text-purple-600 text-sm font-medium">1</span>
-                    </div>
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Seek Consent</h4>
-                    <p className="text-gray-600 text-sm">
-                      Always ask for permission before sharing content that involves others.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="h-6 w-6 rounded-full bg-purple-100 flex items-center justify-center">
-                      <span className="text-purple-600 text-sm font-medium">2</span>
-                    </div>
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Verify Information</h4>
-                    <p className="text-gray-600 text-sm">
-                      Check facts before sharing news or information to prevent spreading misinformation.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="h-6 w-6 rounded-full bg-purple-100 flex items-center justify-center">
-                      <span className="text-purple-600 text-sm font-medium">3</span>
-                    </div>
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Consider Impact</h4>
-                    <p className="text-gray-600 text-sm">
-                      Think about how your content might affect different audiences before posting.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="h-6 w-6 rounded-full bg-purple-100 flex items-center justify-center">
-                      <span className="text-purple-600 text-sm font-medium">4</span>
-                    </div>
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Respect Privacy</h4>
-                    <p className="text-gray-600 text-sm">
-                      Use privacy settings intentionally and respect others' privacy boundaries.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
