@@ -76,28 +76,33 @@ const DeepfakeRisks = () => {
         <CardContent className="space-y-4">
           <div className="space-y-4">
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">The Creation and Detection of Deepfakes: A Survey</h4>
-              <p className="text-sm text-gray-500 mt-1">ACM Computing Surveys (2022)</p>
-              <p className="mt-2 text-sm">This comprehensive survey examines the technical aspects of deepfake creation and detection methods, with a focus on machine learning approaches.</p>
-              <a href="https://doi.org/10.1145/3509939" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">The Emergence of Deepfake Technology: A Review</h4>
+              <p className="text-sm text-gray-500 mt-1">By Mika Westerlund</p>
+              <p className="mt-2 text-sm">A comprehensive review exploring the development, implications, and potential impacts of deepfake technology.</p>
+            </div>
+
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-medium text-purple-700">Social Media and the Threats against Human Security – Deepfake and Fake News</h4>
+              <p className="text-sm text-gray-500 mt-1">Research Publication</p>
+              <a 
+                href="https://www.ceeol.com/search/chapter-detail?id=919256" 
+                className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
 
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Ethical and Social Implications of Deepfakes</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Ethics and Information Technology (2021)</p>
-              <p className="mt-2 text-sm">An exploration of the ethical considerations surrounding deepfake technology, examining social impact, privacy concerns, and potential regulatory frameworks.</p>
-              <a href="https://doi.org/10.1007/s10676-020-09564-w" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
-                Read Publication <ExternalLink className="ml-1 h-3 w-3" />
-              </a>
-            </div>
-
-            <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Deepfakes and Disinformation: Exploring the Impact on Political Discourse</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Political Communication (2023)</p>
-              <p className="mt-2 text-sm">Examines how deepfake technology is changing the landscape of political communications and its implications for democratic processes.</p>
-              <a href="https://doi.org/10.1080/10584609.2023.2176301" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">AI-Powered Social Engineering: Understanding the Role of Deepfake Technology in Exploiting Human Trust</h4>
+              <p className="text-sm text-gray-500 mt-1">By Harrison Blake</p>
+              <a 
+                href="https://www.researchgate.net/profile/Harrison-Blake-2/publication/388931016_AI-Powered_Social_Engineering_Understanding_the_Role_of_Deepfake_Technology_in_Exploiting_Human_Trust/links/67ad4e5d96e7fb48b9c0b09c/AI-Powered-Social-Engineering-Understanding-the-Role-of-Deepfake-Technology-in-Exploiting-Human-Trust.pdf" 
+                className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
