@@ -70,28 +70,28 @@ const OSINTRisks = () => {
         <CardContent className="space-y-4">
           <div className="space-y-4">
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Social Media Intelligence: Opportunities, Limitations, and Ethical Considerations</h4>
-              <p className="text-sm text-gray-500 mt-1">Journal of Information Science (2020)</p>
-              <p className="mt-2 text-sm">This research examines the ethical considerations of using OSINT techniques for intelligence gathering from social media platforms.</p>
-              <a href="https://doi.org/10.1177/0165551519848675" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">Open source intelligence, social media and law enforcement: Visions, constraints and critiques</h4>
+              <p className="text-sm text-gray-500 mt-1">European Journal of Cultural Studies</p>
+              <p className="mt-2 text-sm">This research examines the integration of social media intelligence within law enforcement practices and explores the ethical implications and constraints.</p>
+              <a href="https://journals.sagepub.com/doi/full/10.1177/1367549415577396" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
 
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">OSINT Tools and Methods: A Systematic Review</h4>
-              <p className="text-sm text-gray-500 mt-1">Information Security Journal: A Global Perspective (2022)</p>
-              <p className="mt-2 text-sm">A comprehensive review of current OSINT methodologies and tools used for digital investigations and security research.</p>
-              <a href="https://doi.org/10.1080/19393555.2021.1971289" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">The Investigator's Dilemma - A Review of Social Media Analytics Research Ethics in Information Systems</h4>
+              <p className="text-sm text-gray-500 mt-1">Australasian Journal of Information Systems</p>
+              <p className="mt-2 text-sm">A comprehensive review of ethical considerations in social media analytics research, focusing on the challenges investigators face when gathering data from public sources.</p>
+              <a href="https://ajis.aaisnet.org/index.php/ajis/article/view/3287" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
 
             <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">The Ethics of OSINT: Privacy Challenges in the Age of Social Media</h4>
-              <p className="text-sm text-gray-500 mt-1">Ethics and Information Technology (2021)</p>
-              <p className="mt-2 text-sm">Explores the privacy implications and ethical frameworks needed when applying OSINT techniques to publicly available social media data.</p>
-              <a href="https://doi.org/10.1007/s10676-021-09598-8" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium text-purple-700">How to feel about emotionalized artificial intelligence? When robot pets, holograms, and chatbots become affective partners</h4>
+              <p className="text-sm text-gray-500 mt-1">Ethics and Information Technology</p>
+              <p className="mt-2 text-sm">Explores the psychological and ethical implications of emotionally intelligent AI systems and how they can affect human-machine relationships.</p>
+              <a href="https://link.springer.com/article/10.1007/s10676-021-09598-8" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
                 Read Publication <ExternalLink className="ml-1 h-3 w-3" />
               </a>
             </div>
