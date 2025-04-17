@@ -39,9 +39,13 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
+          <Link to="/about" className="text-gray-700 hover:text-purple-600 transition-colors">
+            About
+          </Link>
+          
           <DropdownMenu>
             <DropdownMenuTrigger className="text-gray-700 hover:text-purple-600 transition-colors">
-              Quiz
+              Quizzes
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>
@@ -60,7 +64,7 @@ const Navbar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger className="text-gray-700 hover:text-purple-600 transition-colors inline-flex items-center">
               <Shield className="w-4 h-4 mr-1" />
-              Risks
+              Emergent Technologies
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>
@@ -85,10 +89,6 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-
-          <Link to="/about" className="text-gray-700 hover:text-purple-600 transition-colors">
-            About
-          </Link>
         </div>
       </div>
 
@@ -100,23 +100,37 @@ const Navbar = () => {
       >
         <div className="flex flex-col space-y-4 px-6">
           <Link
-            to="/#quiz"
+            to="/about"
             className="text-gray-700 hover:text-purple-600 py-2 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Social Media Ethics Quiz
+            About
           </Link>
-          <Link
-            to="/general-ethics"
-            className="text-gray-700 hover:text-purple-600 py-2 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            General Ethics Quiz
-          </Link>
+          
+          <div className="border-t pt-2">
+            <div className="font-medium text-gray-900 mb-2">Quizzes</div>
+            <div className="pl-5 flex flex-col space-y-2">
+              <Link
+                to="/#quiz"
+                className="text-gray-700 hover:text-purple-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Social Media Ethics Quiz
+              </Link>
+              <Link
+                to="/general-ethics"
+                className="text-gray-700 hover:text-purple-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                General Ethics Quiz
+              </Link>
+            </div>
+          </div>
+          
           <div className="border-t pt-2">
             <div className="font-medium text-gray-900 mb-2 flex items-center">
               <Shield className="w-4 h-4 mr-1" />
-              Risks
+              Emergent Technologies
             </div>
             <div className="pl-5 flex flex-col space-y-2">
               <Link
@@ -149,13 +163,6 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <Link
-            to="/about"
-            className="text-gray-700 hover:text-purple-600 py-2 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </Link>
         </div>
       </div>
     </nav>
