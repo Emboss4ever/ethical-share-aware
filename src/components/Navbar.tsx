@@ -61,34 +61,10 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-gray-700 hover:text-purple-600 transition-colors inline-flex items-center">
-              <Shield className="w-4 h-4 mr-1" />
-              Emergent Technologies
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                <Link to="/risks/osint" className="w-full">
-                  OSINT Vulnerabilities
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/risks/deepfakes" className="w-full">
-                  Deepfake Exploitation
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/risks/identity-theft" className="w-full">
-                  Identity Theft
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/risks/data-theft" className="w-full">
-                  Data Theft
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Link to="/risks" className="text-gray-700 hover:text-purple-600 transition-colors inline-flex items-center">
+            <Shield className="w-4 h-4 mr-1" />
+            Social Media Privacy Risks
+          </Link>
         </div>
       </div>
 
@@ -130,9 +106,16 @@ const Navbar = () => {
           <div className="border-t pt-2">
             <div className="font-medium text-gray-900 mb-2 flex items-center">
               <Shield className="w-4 h-4 mr-1" />
-              Emergent Technologies
+              Social Media Privacy Risks
             </div>
             <div className="pl-5 flex flex-col space-y-2">
+              <Link
+                to="/risks"
+                className="text-gray-700 hover:text-purple-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                All Risks
+              </Link>
               <Link
                 to="/risks/osint"
                 className="text-gray-700 hover:text-purple-600 transition-colors"
