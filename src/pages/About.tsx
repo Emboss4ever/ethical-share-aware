@@ -31,9 +31,7 @@ const About = () => {
 
                   Emergent technologies like Open-Source Intelligence (OSINT), deepfake generation, and AI-driven identity theft have empowered bad actors to manipulate and deceive with alarming precision. These tools can be used to impersonate individuals, spread misinformation, or even engineer trust-based scams that feel incredibly personal.
 
-                  This intersection — where social media habits meet emerging tech and ethical decision-making — is where digital vulnerabilities are most exposed. Navigating this space requires awareness, critical thinking, and a solid ethical foundation. Our goal is to help you pause, reflect, and make more intentional choices about what you share and how you engage online.
-
-                  Because in the digital age, what you share says more than you think — and the consequences can reach further than you realize.
+                  This intersection — where social media habits meet emerging tech and ethical decision-making — is where digital vulnerabilities are most exposed. Navigating this space requires awareness, critical thinking, and a solid ethical foundation.
                 </p>
               </div>
               
