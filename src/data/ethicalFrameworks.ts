@@ -12,7 +12,7 @@ export const ethicalFrameworks: EthicalFramework[] = [
       "Respect individual rights and dignity",
       "Fulfill your duties and obligations"
     ],
-    socialMediaExample: "Not sharing fake news even if it would benefit your cause, because spreading misinformation violates the principle of truthfulness."
+    potentialVulnerabilities: "Rigid adherence to rules without considering context can lead to <a href='/risks/osint'>OSINT vulnerabilities</a>. For example, consistently using the same platforms and posting patterns creates predictable digital footprints that are easier to track and exploit."
   },
   {
     id: "consequentialism",
@@ -24,7 +24,7 @@ export const ethicalFrameworks: EthicalFramework[] = [
       "Balance individual and collective good",
       "Think about long-term effects"
     ],
-    socialMediaExample: "Deciding not to share a controversial joke because it might harm relationships or offend others, despite innocent intentions."
+    potentialVulnerabilities: "Focusing solely on engagement and reach can lead to <a href='/risks/identity-theft'>identity theft risks</a>. Sharing personal details for likes and comments might maximize short-term social outcomes but creates a rich dataset for malicious actors to exploit."
   },
   {
     id: "virtue",
@@ -36,6 +36,6 @@ export const ethicalFrameworks: EthicalFramework[] = [
       "Show integrity and honesty",
       "Demonstrate courage and compassion"
     ],
-    socialMediaExample: "Being authentic and honest about your experiences rather than creating a false impression to gain followers."
+    potentialVulnerabilities: "Excessive authenticity without boundaries can increase vulnerability to <a href='/risks/deepfakes'>deepfake exploitation</a>. Sharing too many authentic photos and videos provides abundant training data for AI to create convincing synthetic media of you."
   }
 ];

@@ -69,9 +69,9 @@ const EthicalFrameworks = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-medium text-lg mb-2">Social Media Example</h4>
-                    <p className="text-muted-foreground bg-muted p-4 rounded-lg">
-                      {framework.socialMediaExample}
+                    <h4 className="font-medium text-lg mb-2">Potential Vulnerabilities</h4>
+                    <p className="text-muted-foreground bg-muted p-4 rounded-lg [&_a]:text-purple-600 [&_a]:underline [&_a]:hover:text-purple-800" 
+                       dangerouslySetInnerHTML={{ __html: framework.potentialVulnerabilities }}>
                     </p>
                   </div>
                 </div>
