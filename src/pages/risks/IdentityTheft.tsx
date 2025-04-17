@@ -10,14 +10,7 @@ const IdentityTheftRisks = () => {
   const location = useLocation();
 
   const handleGoBack = () => {
-    // If we came from the quiz results, go back to results
-    // Otherwise, go to the previous page
-    const state = location.state as { fromQuizResults?: boolean };
-    if (state?.fromQuizResults) {
-      navigate('/quiz-results');
-    } else {
-      navigate("/risks");
-    }
+    navigate("/risks");
   };
 
   return (
@@ -29,7 +22,7 @@ const IdentityTheftRisks = () => {
           className="flex items-center"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Results
+          Back to All Risks
         </Button>
         
         <Button 

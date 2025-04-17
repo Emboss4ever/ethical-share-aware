@@ -10,12 +10,7 @@ const DeepfakeRisks = () => {
   const location = useLocation();
 
   const handleGoBack = () => {
-    const state = location.state as { fromQuizResults?: boolean };
-    if (state?.fromQuizResults) {
-      navigate('/quiz-results');
-    } else {
-      navigate("/risks");
-    }
+    navigate("/risks");
   };
 
   return (
@@ -27,7 +22,7 @@ const DeepfakeRisks = () => {
           className="flex items-center"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Results
+          Back to All Risks
         </Button>
         
         <Button 
