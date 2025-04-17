@@ -1,14 +1,12 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Home } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const IdentityTheftRisks = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleGoBack = () => {
     navigate("/risks");
@@ -74,15 +72,6 @@ const IdentityTheftRisks = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-4">
-            <div className="p-4 border rounded-lg">
-              <h4 className="font-medium text-purple-700">Social Media Security: Identity Theft Prevention</h4>
-              <p className="text-sm text-gray-500 mt-1">International Journal of Innovative Science and Research Technology (2020)</p>
-              <p className="mt-2 text-sm">This research investigates the relationship between social media usage and identity theft, offering preventative strategies for users to protect their digital identities.</p>
-              <a href="https://d1wqtxts1xzle7.cloudfront.net/93994309/ijisrt20aug762-libre.pdf" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
-                Read Publication <ExternalLink className="ml-1 h-3 w-3" />
-              </a>
-            </div>
-
             <div className="p-4 border rounded-lg">
               <h4 className="font-medium text-purple-700">The Identity Theft Threat of Social Media Information Disclosure</h4>
               <p className="text-sm text-gray-500 mt-1">Computers & Security (2016)</p>
