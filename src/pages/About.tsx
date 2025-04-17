@@ -38,7 +38,7 @@ const About = () => {
               <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
                 <h3 className="text-xl font-semibold mb-3">How to Use</h3>
                 <p className="text-gray-600">
-                  Take the quiz, explore different frameworks, and use these insights to develop your own ethical approach to social media sharing.
+                  Take the social media ethics quiz, analyse your score breakdown, which frameworks you operate within and how this can potentially open you up to certain vulnerabilities in the face of the risks mentioned. You can also take the 'general ethics' quiz to see if your behaviours with regards to social media align with your general ethical alignment. Use these insights to develop your own ethical approach to social media sharing and be more aware of the potential consequences.
                 </p>
               </div>
               
