@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Home } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const DeepfakeRisks = () => {
@@ -15,20 +14,31 @@ const DeepfakeRisks = () => {
     if (state?.fromQuizResults) {
       navigate('/quiz-results');
     } else {
-      navigate(-1);
+      navigate("/risks");
     }
   };
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <Button 
-        variant="ghost" 
-        onClick={handleGoBack} 
-        className="mb-6"
-      >
-        <ArrowLeft className="mr-2 h-4 w-4" />
-        Back to Results
-      </Button>
+      <div className="flex flex-col sm:flex-row gap-3 mb-6">
+        <Button 
+          variant="ghost" 
+          onClick={handleGoBack} 
+          className="flex items-center"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Results
+        </Button>
+        
+        <Button 
+          variant="outline" 
+          onClick={() => navigate("/")}
+          className="flex items-center"
+        >
+          <Home className="mr-2 h-4 w-4" />
+          Back to Homepage
+        </Button>
+      </div>
 
       <Card className="mb-8">
         <CardHeader>
