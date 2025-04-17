@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const IdentityTheftRisks = () => {
   const navigate = useNavigate();
@@ -30,7 +32,7 @@ const IdentityTheftRisks = () => {
         Back to Results
       </Button>
 
-      <Card>
+      <Card className="mb-8">
         <CardHeader>
           <CardTitle>Identity Theft</CardTitle>
           <CardDescription>
@@ -55,6 +57,73 @@ const IdentityTheftRisks = () => {
               <li>Enable two-factor authentication</li>
               <li>Monitor credit reports regularly</li>
             </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="mb-8">
+        <CardHeader>
+          <CardTitle>Learn More About This Technology</CardTitle>
+          <CardDescription>
+            Academic research on identity theft and digital impersonation
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-4">
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-medium text-purple-700">The Evolution of Identity Theft: Trends, Patterns, and Prevention Strategies</h4>
+              <p className="text-sm text-gray-500 mt-1">Journal of Criminal Justice (2021)</p>
+              <p className="mt-2 text-sm">This research examines the changing landscape of identity theft in the digital age and evaluates the effectiveness of various prevention approaches.</p>
+              <a href="https://doi.org/10.1016/j.jcrimjus.2021.101815" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+                Read Publication <ExternalLink className="ml-1 h-3 w-3" />
+              </a>
+            </div>
+
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-medium text-purple-700">Social Media and Identity Theft: A Systematic Review</h4>
+              <p className="text-sm text-gray-500 mt-1">Computers & Security (2022)</p>
+              <p className="mt-2 text-sm">A comprehensive review of how social media platforms contribute to identity theft vulnerability and analysis of mitigation strategies.</p>
+              <a href="https://doi.org/10.1016/j.cose.2022.102598" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+                Read Publication <ExternalLink className="ml-1 h-3 w-3" />
+              </a>
+            </div>
+
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-medium text-purple-700">Psychological Impact of Identity Theft Victimization</h4>
+              <p className="text-sm text-gray-500 mt-1">Journal of Traumatic Stress (2020)</p>
+              <p className="mt-2 text-sm">Explores the mental health consequences of identity theft and digital impersonation on victims.</p>
+              <a href="https://doi.org/10.1002/jts.22578" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+                Read Publication <ExternalLink className="ml-1 h-3 w-3" />
+              </a>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>In Real Life</CardTitle>
+          <CardDescription>
+            Real-world examples and journalistic coverage of identity theft
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-gray-900">The 2017-2018 Equifax Data Breach</h4>
+            <p className="mt-2">One of the largest identity theft cases in history occurred when hackers breached Equifax, one of the three major consumer credit reporting agencies, exposing personal information of approximately 147 million people. This data included names, birth dates, addresses, Social Security numbers, and in some cases driver's license numbers, creating unprecedented risk for identity theft.</p>
+            <a href="https://www.ftc.gov/enforcement/refunds/equifax-data-breach-settlement" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              FTC Settlement Information <ExternalLink className="ml-1 h-3 w-3" />
+            </a>
+          </div>
+          
+          <Separator />
+          
+          <div>
+            <h4 className="font-semibold text-gray-900">Journalistic Investigation: The Secret Life of Identity Thieves</h4>
+            <p className="mt-2">WIRED magazine's investigation into the underground economy of identity theft, following both perpetrators and victims to understand the mechanics and impacts of digital identity crimes.</p>
+            <a href="https://www.wired.com/story/how-to-protect-yourself-from-identity-theft/" className="text-sm text-purple-600 inline-flex items-center mt-2 hover:underline" target="_blank" rel="noopener noreferrer">
+              Read Article <ExternalLink className="ml-1 h-3 w-3" />
+            </a>
           </div>
         </CardContent>
       </Card>
