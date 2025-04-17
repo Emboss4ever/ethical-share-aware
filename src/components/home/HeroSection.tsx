@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -48,10 +47,7 @@ const HeroSection = () => {
                 {["Privacy & Consent: Recognize how sharing personal data online can expose you and others to harm", 
                    "Information Accuracy: Learn to discern truth from manipulation in an environment filled with sophisticated misinformation", 
                    "Impact Awareness: Be aware that your digital footprint can be leveraged against you or those around you in unexpected ways"].map((item, i) => (
-                  <li key={i} className="flex items-center">
-                    <svg className="h-5 w-5 text-purple-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                  <li key={i} className="text-gray-600">
                     {item}
                   </li>
                 ))}
