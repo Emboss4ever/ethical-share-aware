@@ -21,14 +21,20 @@ const About = () => {
               <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
                 <h3 className="text-xl font-semibold mb-3">Purpose</h3>
                 <p className="text-gray-600">
-                  This tool was designed to help young adults (16-25) develop a more intentional and ethical approach to what they share online.
+                  This tool was designed to help young adults (16-25) develop a more intentional and ethical approach to what they share online, aimed at educating social media users to be critical in their behaviours and aware of emergent technologies that can be used to exploit social media users.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-teal-500">
                 <h3 className="text-xl font-semibold mb-3">Why It Matters</h3>
                 <p className="text-gray-600">
-                  Social media impacts real lives. Understanding ethical frameworks helps you make more conscious decisions about your digital presence.
+                  In today's hyperconnected world, social media is more than just a way to stay in touch — it's a window into our lives. But as we share, like, and comment, we often overlook how our digital footprints can be pieced together and exploited.
+
+                  Emergent technologies like Open-Source Intelligence (OSINT), deepfake generation, and AI-driven identity theft have empowered bad actors to manipulate and deceive with alarming precision. These tools can be used to impersonate individuals, spread misinformation, or even engineer trust-based scams that feel incredibly personal.
+
+                  This intersection — where social media habits meet emerging tech and ethical decision-making — is where digital vulnerabilities are most exposed. Navigating this space requires awareness, critical thinking, and a solid ethical foundation. Our goal is to help you pause, reflect, and make more intentional choices about what you share and how you engage online.
+
+                  Because in the digital age, what you share says more than you think — and the consequences can reach further than you realize.
                 </p>
               </div>
               
@@ -45,9 +51,7 @@ const About = () => {
                   <h3 className="text-xl font-semibold">About the Developer</h3>
                 </div>
                 <p className="text-gray-600">
-                  Hi! I'm Sarah, a computer science student passionate about the intersection of technology and ethics. 
-                  I created EthicalShare to help young adults navigate the complex world of social media sharing with 
-                  greater awareness and responsibility.
+                  Hi! I'm Emma-Rose Blacher, a second year Computational Social Science student at The University of Amsterdam and this tool is part of my Change Making Expertise assignment.
                 </p>
               </div>
             </div>
