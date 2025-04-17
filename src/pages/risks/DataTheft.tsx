@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,7 @@ const DataTheftRisks = () => {
     <div className="container mx-auto py-8 px-4">
       <Button 
         variant="ghost" 
-        onClick={() => navigate(-1)} 
+        onClick={() => navigate("/risks")} 
         className="mb-6"
       >
         <ArrowLeft className="mr-2 h-4 w-4" />
