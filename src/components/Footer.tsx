@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -18,19 +19,19 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#quiz" className="text-gray-600 hover:text-purple-600 text-sm transition-colors">
+                <Link to="/#quiz" className="text-gray-600 hover:text-purple-600 text-sm transition-colors">
                   Take the Assessment
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#frameworks" className="text-gray-600 hover:text-purple-600 text-sm transition-colors">
+                <Link to="/frameworks" className="text-gray-600 hover:text-purple-600 text-sm transition-colors">
                   Ethical Frameworks
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-600 hover:text-purple-600 text-sm transition-colors">
+                <Link to="/about" className="text-gray-600 hover:text-purple-600 text-sm transition-colors">
                   About the Tool
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

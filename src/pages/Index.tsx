@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import QuizSection from "@/components/home/QuizSection";
-import AboutSection from "@/components/home/AboutSection";
 import FrameworksCallToAction from "@/components/home/FrameworksCallToAction";
 
 const Index = () => {
@@ -23,7 +22,6 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <QuizSection />
-      <AboutSection />
       <FrameworksCallToAction />
       <Footer />
     </div>

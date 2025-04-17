@@ -86,9 +86,9 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <a href="#about" className="text-gray-700 hover:text-purple-600 transition-colors">
+          <Link to="/about" className="text-gray-700 hover:text-purple-600 transition-colors">
             About
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -149,13 +149,13 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <a
-            href="#about"
+          <Link
+            to="/about"
             className="text-gray-700 hover:text-purple-600 py-2 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             About
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
