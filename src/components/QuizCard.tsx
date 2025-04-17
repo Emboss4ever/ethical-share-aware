@@ -6,7 +6,7 @@ import { socialMediaQuiz } from "@/data/quizQuestions";
 import { useToast } from "@/hooks/use-toast";
 import QuizQuestion from "./quiz/QuizQuestion";
 import QuizResults from "./quiz/QuizResults";
-import { ResultScore } from "./quiz/types";
+import { ResultScore, scoringRules } from "./quiz/types";
 import { Button } from "./ui/button";
 import "./quiz/Quiz.css";
 
@@ -59,26 +59,58 @@ const QuizCard = () => {
       virtue: 0
     };
 
+    // Apply the new scoring rules
     selectedOptions.forEach((optionId, questionIndex) => {
       const question = socialMediaQuiz[questionIndex];
       const selectedOption = question.options.find(opt => opt.id === optionId);
       
       if (selectedOption) {
         selectedOption.scoring.forEach(score => {
-          frameworkScores[score.framework] += score.score;
+          // Determine the type of scoring rule based on score.score
+          let points = 0;
+          if (score.score >= 30) {
+            points = scoringRules.primary; // +20
+          } else if (score.score >= 15) {
+            points = scoringRules.secondary; // +10
+          } else if (score.score === 0) {
+            points = scoringRules.neutral; // 0
+          } else if (score.score < 0) {
+            points = scoringRules.conflict; // -20
+          }
+          
+          frameworkScores[score.framework] += points;
         });
       }
     });
 
-    const maxPossibleScorePerFramework = 100; // Adjusted for scoring system
+    // Ensure exactly one framework has the highest score (break ties if needed)
+    const maxScore = Math.max(...Object.values(frameworkScores));
+    const highestFrameworks = Object.keys(frameworkScores).filter(
+      framework => frameworkScores[framework] === maxScore
+    );
+    
+    // If there's a tie, artificially break it for one dominant framework
+    if (highestFrameworks.length > 1) {
+      // We'll choose the first one as dominant (could be randomized)
+      frameworkScores[highestFrameworks[0]] += 1;
+    }
+
+    // Calculate percentages based on relative scores
+    const totalPossibleScore = totalQuestions * scoringRules.primary; // Max possible score
     
     const resultsArray: ResultScore[] = Object.entries(frameworkScores)
-      .map(([frameworkId, score]) => ({
-        frameworkId,
-        score,
-        percentage: Math.max(0, Math.min(100, (score / maxPossibleScorePerFramework) * 100))
-      }))
-      .sort((a, b) => b.percentage - a.percentage);
+      .map(([frameworkId, score]) => {
+        // Ensure percentage is positive and capped at 100%
+        const rawPercentage = (score / totalPossibleScore) * 100;
+        const percentage = Math.max(0, Math.min(100, rawPercentage));
+        
+        return {
+          frameworkId,
+          score,
+          percentage
+        };
+      })
+      .sort((a, b) => b.score - a.score); // Sort by score instead of percentage
 
     setResults(resultsArray);
   };
