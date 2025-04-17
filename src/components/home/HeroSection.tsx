@@ -44,12 +44,23 @@ const HeroSection = () => {
                 Every post, comment, and share online can expose you to hidden risks. Understanding how your digital actions can be exploited by emerging threats—such as identity theft, OSINT, and deepfake manipulation—is essential.
               </p>
               <ul className="space-y-2 text-gray-600">
-                {["Privacy & Consent: Recognize how sharing personal data online can expose you and others to harm", 
-                   "Information Accuracy: Learn to discern truth from manipulation in an environment filled with sophisticated misinformation", 
-                   "Impact Awareness: Be aware that your digital footprint can be leveraged against you or those around you in unexpected ways"].map((item, i) => (
-                  <li key={i} className="text-gray-600">
-                    {item}
-                  </li>
+                {[
+                  {
+                    text: "**Privacy & Consent**: Recognize how sharing personal data online can expose you and others to harm", 
+                    key: 0
+                  },
+                  {
+                    text: "**Information Accuracy**: Learn to discern truth from manipulation in an environment filled with sophisticated misinformation", 
+                    key: 1
+                  },
+                  {
+                    text: "**Impact Awareness**: Be aware that your digital footprint can be leveraged against you or those around you in unexpected ways", 
+                    key: 2
+                  }
+                ].map(({ text, key }) => (
+                  <li key={key} className="text-gray-600" dangerouslySetInnerHTML={{
+                    __html: text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  }} />
                 ))}
               </ul>
             </div>
