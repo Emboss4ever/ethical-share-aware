@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -72,7 +73,7 @@ const QuizCard = () => {
           } else if (score.score === 0) {
             points = scoringRules.neutral; // 0
           } else if (score.score < 0) {
-            points = scoringRules.conflict; // -20
+            points = scoringRules.conflict; // -5 (changed from -20)
           }
           
           frameworkScores[score.framework] += points;
